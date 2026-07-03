@@ -1,0 +1,1 @@
+Website / Github pages for FOMO NOMO's landing page and Privacy Policy
