@@ -1,0 +1,75 @@
+:root {
+  --fomo-background: #fcf9f6;
+  --fomo-on-background: #1b1c1a;
+  --fomo-surface: #fcf9f6;
+  --fomo-surface-bright: #fcf9f6;
+  --fomo-surface-dim: #dcdad7;
+  --fomo-surface-variant: #e5e2df;
+  --fomo-surface-container: #f0edea;
+  --fomo-surface-container-low: #f6f3f0;
+  --fomo-surface-container-lowest: #ffffff;
+  --fomo-surface-container-high: #eae8e5;
+  --fomo-surface-container-highest: #e5e2df;
+  --fomo-surface-tint: #6f5a4a;
+  --fomo-on-surface: #1b1c1a;
+  --fomo-on-surface-variant: #4e453e;
+  --fomo-inverse-surface: #31302f;
+  --fomo-inverse-on-surface: #f3f0ed;
+  --fomo-primary: #1c0f04;
+  --fomo-primary-container: #332316;
+  --fomo-primary-fixed: #faddc9;
+  --fomo-primary-fixed-dim: #ddc1ae;
+  --fomo-on-primary: #ffffff;
+  --fomo-on-primary-container: #a18977;
+  --fomo-on-primary-fixed: #27180c;
+  --fomo-on-primary-fixed-variant: #564334;
+  --fomo-secondary: #735a3e;
+  --fomo-secondary-container: #fcdab6;
+  --fomo-secondary-fixed: #ffddb9;
+  --fomo-secondary-fixed-dim: #e2c19f;
+  --fomo-on-secondary: #ffffff;
+  --fomo-on-secondary-container: #775e42;
+  --fomo-on-secondary-fixed: #291803;
+  --fomo-on-secondary-fixed-variant: #594228;
+  --fomo-tertiary: #171006;
+  --fomo-tertiary-container: #2d2519;
+  --fomo-tertiary-fixed: #f0e0ce;
+  --fomo-tertiary-fixed-dim: #d3c4b2;
+  --fomo-on-tertiary: #ffffff;
+  --fomo-on-tertiary-container: #988b7b;
+  --fomo-on-tertiary-fixed: #221a0f;
+  --fomo-on-tertiary-fixed-variant: #4f4538;
+  --fomo-error: #ba1a1a;
+  --fomo-error-container: #ffdad6;
+  --fomo-on-error: #ffffff;
+  --fomo-on-error-container: #93000a;
+  --fomo-outline: #80756e;
+  --fomo-outline-variant: #d2c4bb;
+  --fomo-inverse-primary: #ddc1ae;
+  --fomo-font-sans: 'Be Vietnam Pro', sans-serif;
+  --fomo-font-mono: 'JetBrains Mono', monospace;
+  --fomo-radius-default: 0.25rem;
+  --fomo-radius-lg: 0.5rem;
+  --fomo-radius-xl: 0.75rem;
+  --fomo-radius-full: 9999px;
+  --fomo-space-xs: 4px;
+  --fomo-space-sm: 8px;
+  --fomo-space-base: 8px;
+  --fomo-space-md: 16px;
+  --fomo-space-lg: 24px;
+  --fomo-space-xl: 32px;
+  --fomo-space-gutter: 16px;
+  --fomo-space-margin-mobile: 16px;
+  --fomo-space-margin-desktop: 32px;
+}
+
+html {
+  background: var(--fomo-background);
+  color: var(--fomo-on-surface);
+}
+
+body {
+  background: var(--fomo-background);
+  color: var(--fomo-on-surface);
+  font-family: var(--fomo-font-sans);
+}
