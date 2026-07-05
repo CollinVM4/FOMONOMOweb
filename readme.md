@@ -5,3 +5,6 @@ Shared theme assets live in `assets/theme.css` and `assets/theme.config.js` so n
 Start python testing server 
 python -m http.server 8000
 http://localhost:8000/
+
+git commit --allow-empty -m "Trigger rebuild"
+git push
