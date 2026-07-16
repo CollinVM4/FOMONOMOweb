@@ -26,10 +26,18 @@
 <header class="sticky top-0 z-50 border-b border-[#d2c4bb]/60 bg-[#fcf9f6]/90 backdrop-blur-md">
   <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
     <div class="text-[22px] font-bold tracking-tight text-[#1c0f04]">FOMO NOMO</div>
-    <nav class="flex items-center gap-5 text-[12px] font-medium uppercase tracking-[0.18em] text-[#4e453e]" style="font-family: 'JetBrains Mono', monospace;">
-      <a class="transition-colors hover:text-[#735a3e]" href="ios.html">App Store</a>
-      <a class="transition-colors hover:text-[#735a3e]" href="andriod.html">Google Play</a>
-    </nav>
+    <div class="relative">
+      <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#d2c4bb]/80 bg-white/70 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#4e453e] shadow-[0_8px_20px_rgba(28,15,4,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+        <span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
+        Menu
+      </button>
+      <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#d2c4bb]/80 bg-[#fcf9f6] p-2 opacity-0 shadow-[0_20px_44px_rgba(28,15,4,0.14)] transition-all duration-200" id="site-menu" style="font-family: 'JetBrains Mono', monospace;">
+        <a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="privacy.html">Privacy Policy</a>
+        <a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="terms.html">Terms of Service</a>
+        <a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="community.html">Community Guidelines</a>
+        <a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="support.html">Support</a>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -38,7 +46,7 @@
     <div class="max-w-4xl space-y-6">
       <h1 class="text-4xl font-bold tracking-tight text-[#1c0f04] md:text-6xl">Putting the 'Social' Back In Social Media</h1>
       <p class="mx-auto max-w-2xl text-base leading-7 text-[#4e453e] md:text-lg">
-        FOMO NOMO helps you find local events, meet new people, and live in the moment. No more missing out on what's happening right around you.
+        No algorithm deciding what you see. Just real posts from real people on your campus, answering one question: what's happening next?
       </p>
     </div>
     <div class="flex flex-col gap-4 sm:flex-row">
@@ -53,25 +61,31 @@
         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#332316]/10 text-[#332316]">
           <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
         </div>
-        <h3 class="text-[22px] font-semibold text-[#1c0f04]">Local Discoveries</h3>
-        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">Find hidden gems on your campus. From micro-celebrities hosting local events to a few friends organizing a scrimmage.</p>
+        <h3 class="text-[22px] font-semibold text-[#1c0f04]">A Feed, Not a Trap</h3>
+        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">No algorithm optimizing for your attention. Just real students posting what's actually happening on campus, right now.</p>
       </article>
 
       <article class="rounded-[24px] border border-[#d2c4bb]/70 bg-[#e5e2df] p-6 shadow-[0_18px_40px_rgba(28,15,4,0.06)] transition-transform duration-300 hover:-translate-y-1">
         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#735a3e]/10 text-[#735a3e]">
           <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
         </div>
-        <h3 class="text-[22px] font-semibold text-[#1c0f04]">Real Connections</h3>
-        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">Meet people who share your interests offline and fit being social into your schedule. Real-world connection, not endless scrolling.</p>
+       <h3 class="text-[22px] font-semibold text-[#1c0f04]">Anyone Can Post What's Next</h3>
+<p class="mt-3 text-[14px] leading-6 text-[#4e453e]">No verified badge, no follower count required. A pickup game, a study session, a talent show tonight if you're hosting it, you can post it.</p>
       </article>
 
       <article class="rounded-[24px] border border-[#d2c4bb]/70 bg-[#e5e2df] p-6 shadow-[0_18px_40px_rgba(28,15,4,0.06)] transition-transform duration-300 hover:-translate-y-1">
         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#2d2519]/10 text-[#171006]">
-          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield_person</span>
         </div>
-        <h3 class="text-[22px] font-semibold text-[#1c0f04]">Users First</h3>
-        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">When I was coming into college, I wished for a platform like this to help me connect with others and find meaningful experiences. Now I have the honor of making it!</p>
+        <h3 class="text-[22px] font-semibold text-[#1c0f04]">Built to Inform, Not Addict</h3>
+        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">Most apps are built to keep you scrolling. This one's built to get you off your phone and making memories.</p>
       </article>
+      <section class="mx-auto w-full max-w-3xl px-4 pb-16 text-center md:px-8">
+        <p class="text-xl italic leading-8 text-[#4e453e] md:text-2xl">
+          "I wished for something like this when I was starting college. A way to actually find what's happening, not just scroll past it. So I built it."
+        </p>
+        <p class="mt-4 text-sm font-semibold text-[#1c0f04]">— Founder, FOMO NOMO</p>
+      </section>
     </div>
   </section>
 
@@ -116,5 +130,59 @@
     </div>
   </div>
 </footer>
+<script>
+  (function () {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('site-menu');
+    const icon = document.getElementById('menu-icon');
+
+    if (!toggle || !menu || !icon) {
+      return;
+    }
+
+    const openMenu = function () {
+      menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+      menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+      toggle.setAttribute('aria-expanded', 'true');
+      icon.textContent = 'close';
+    };
+
+    const closeMenu = function () {
+      menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+      menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+      toggle.setAttribute('aria-expanded', 'false');
+      icon.textContent = 'menu';
+    };
+
+    const isOpen = function () {
+      return toggle.getAttribute('aria-expanded') === 'true';
+    };
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      if (isOpen()) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && isOpen()) {
+        closeMenu();
+      }
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+</script>
 </body>
 </html>

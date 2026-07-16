@@ -7,13 +7,26 @@
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 <body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f7f8fb] text-[#15171d] antialiased">
 <header class="border-b border-[#d7deea]/70 bg-[#f7f8fb]/90 backdrop-blur-md">
 	<div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
 		<a class="text-[22px] font-bold tracking-tight text-[#232a3a]" href="index.html">FOMO NOMO</a>
-		<div class="text-[11px] uppercase tracking-[0.22em] text-[#5f6d84]" style="font-family: 'JetBrains Mono', monospace;">Terms of Service</div>
+		<div class="relative">
+			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#d7deea]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#5f6d84] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+				<span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
+				Menu
+			</button>
+			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#d7deea]/80 bg-[#f7f8fb] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu" style="font-family: 'JetBrains Mono', monospace;">
+				<a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="index.html">Home</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="privacy.html">Privacy Policy</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="terms.html">Terms of Service</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="community.html">Community Guidelines</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] uppercase tracking-[0.16em] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="support.html">Support</a>
+			</nav>
+		</div>
 	</div>
 </header>
 
@@ -89,5 +102,59 @@
 		</div>
 	</div>
 </footer>
+<script>
+	(function () {
+		const toggle = document.getElementById('menu-toggle');
+		const menu = document.getElementById('site-menu');
+		const icon = document.getElementById('menu-icon');
+
+		if (!toggle || !menu || !icon) {
+			return;
+		}
+
+		const openMenu = function () {
+			menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+			menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+			toggle.setAttribute('aria-expanded', 'true');
+			icon.textContent = 'close';
+		};
+
+		const closeMenu = function () {
+			menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+			menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+			toggle.setAttribute('aria-expanded', 'false');
+			icon.textContent = 'menu';
+		};
+
+		const isOpen = function () {
+			return toggle.getAttribute('aria-expanded') === 'true';
+		};
+
+		toggle.addEventListener('click', function (event) {
+			event.stopPropagation();
+			if (isOpen()) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		});
+
+		document.addEventListener('click', function (event) {
+			if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+				closeMenu();
+			}
+		});
+
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'Escape' && isOpen()) {
+				closeMenu();
+			}
+		});
+
+		menu.querySelectorAll('a').forEach(function (link) {
+			link.addEventListener('click', closeMenu);
+		});
+	})();
+</script>
 </body>
 </html>
