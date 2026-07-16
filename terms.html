@@ -9,8 +9,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+	.skip-link {
+		position: absolute;
+		top: 0;
+		left: 1rem;
+		transform: translateY(-140%);
+		background: #0b5fff;
+		color: #ffffff;
+		padding: 0.6rem 0.9rem;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		z-index: 100;
+	}
+
+	.skip-link:focus-visible {
+		transform: translateY(0.6rem);
+	}
+
+	:where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+		outline: 3px solid #0b5fff;
+		outline-offset: 3px;
+		box-shadow: 0 0 0 2px #ffffff;
+		border-radius: 0.5rem;
+	}
+</style>
 </head>
 <body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f7f8fb] text-[#15171d] antialiased">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="border-b border-[#d7deea]/70 bg-[#f7f8fb]/90 backdrop-blur-md">
 	<div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
 		<a class="text-[22px] font-bold tracking-tight text-[#232a3a]" href="index.html">FOMO NOMO</a>
@@ -30,7 +56,7 @@
 	</div>
 </header>
 
-<main class="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16">
+<main class="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16" id="main-content" tabindex="-1">
 	<section class="overflow-hidden rounded-[28px] border border-[#d7deea]/70 bg-white shadow-[0_20px_50px_rgba(21,23,29,0.06)]">
 		<div class="border-b border-[#d7deea]/60 bg-gradient-to-br from-[#eaf0f8] via-[#f7f9fc] to-white px-6 py-8 md:px-10 md:py-12">
 			<p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[#5f6d84]" style="font-family: 'JetBrains Mono', monospace;">Effective Date: July 3, 2026</p>
@@ -112,18 +138,31 @@
 			return;
 		}
 
+		const focusableMenuItems = function () {
+			return Array.prototype.slice.call(menu.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+		};
+
 		const openMenu = function () {
 			menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
 			menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
 			toggle.setAttribute('aria-expanded', 'true');
 			icon.textContent = 'close';
+
+			const items = focusableMenuItems();
+			if (items.length) {
+				items[0].focus();
+			}
 		};
 
-		const closeMenu = function () {
+		const closeMenu = function (restoreFocus) {
 			menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
 			menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
 			toggle.setAttribute('aria-expanded', 'false');
 			icon.textContent = 'menu';
+
+			if (restoreFocus) {
+				toggle.focus();
+			}
 		};
 
 		const isOpen = function () {
@@ -133,7 +172,7 @@
 		toggle.addEventListener('click', function (event) {
 			event.stopPropagation();
 			if (isOpen()) {
-				closeMenu();
+				closeMenu(true);
 			} else {
 				openMenu();
 			}
@@ -141,18 +180,43 @@
 
 		document.addEventListener('click', function (event) {
 			if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-				closeMenu();
+				closeMenu(false);
 			}
 		});
 
 		document.addEventListener('keydown', function (event) {
+			if (!isOpen()) {
+				return;
+			}
+
 			if (event.key === 'Escape' && isOpen()) {
-				closeMenu();
+				closeMenu(true);
+				return;
+			}
+
+			if (event.key === 'Tab') {
+				const items = focusableMenuItems();
+				if (!items.length) {
+					return;
+				}
+
+				const first = items[0];
+				const last = items[items.length - 1];
+
+				if (event.shiftKey && document.activeElement === first) {
+					event.preventDefault();
+					last.focus();
+				} else if (!event.shiftKey && document.activeElement === last) {
+					event.preventDefault();
+					first.focus();
+				}
 			}
 		});
 
 		menu.querySelectorAll('a').forEach(function (link) {
-			link.addEventListener('click', closeMenu);
+			link.addEventListener('click', function () {
+				closeMenu(false);
+			});
 		});
 	})();
 </script>
