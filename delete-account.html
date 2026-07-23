@@ -70,10 +70,18 @@
 				<p class="mt-3 text-[15px] leading-7 text-[#6f3029]">Deleting your account is permanent and cannot be undone. Your profile, posts, comments, messages, and related account data will be removed in accordance with our retention policies.</p>
 			</article>
 
+			<article class="relative rounded-[22px] border border-[#ecd8b7] bg-[#fffaf3] p-6">
+				<div class="absolute right-6 top-6 flex h-11 w-11 items-center justify-center text-[#8a1906]" aria-hidden="true">
+					<span id="delete-account-icon"></span>
+				</div>
+				<h2 class="pr-14 text-[22px] font-semibold text-[#5b3d18]">Delete Through the App</h2>
+				<p class="mt-3 text-[15px] leading-7 text-[#6a4e29]">Navigate You &gt; Settings &gt; Delete your account.</p>
+			</article>
+
 			<article class="rounded-[22px] border border-[#ecd8b7] bg-[#fffaf3] p-6">
 				<h2 class="text-[22px] font-semibold text-[#5b3d18]">Request by Email</h2>
 				<p class="mt-3 text-[15px] leading-7 text-[#6a4e29]">Use the button below to draft a request email. Please send it from the email associated with your FOMO NOMO account.</p>
-				<a class="mt-5 inline-flex items-center rounded-full bg-[#5b3d18] px-5 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#492f11]" style="font-family: 'JetBrains Mono', monospace;" href="mailto:support@fomonomoapp.com?subject=Account%20Deletion%20Request&amp;body=Hello%20FOMO%20NOMO%20Support%2C%0A%0AI%20am%20requesting%20permanent%20deletion%20of%20my%20account.%0A%0AAccount%20email%3A%20%0AFull%20name%3A%20%0ACampus%20(optional)%3A%20%0AReason%20(optional)%3A%20%0A%0AThank%20you.">Send Deletion Email</a>
+				<a class="mt-5 inline-flex items-center rounded-full bg-[#8a1906] px-5 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#492f11]" style="font-family: 'JetBrains Mono', monospace;" href="mailto:support@fomonomoapp.com?subject=Account%20Deletion%20Request&amp;body=Hello%20FOMO%20NOMO%20Support%2C%0A%0AI%20am%20requesting%20permanent%20deletion%20of%20my%20account.%0A%0AAccount%20email%3A%20%0AFull%20name%3A%20%0ACampus%20(optional)%3A%20%0AReason%20(optional)%3A%20%0A%0AThank%20you.">Send Deletion Email</a>
 				<p class="mt-4 text-[14px] leading-7 text-[#6a4e29]">Direct contact: <a class="underline decoration-[#8d6a37]/60 underline-offset-2 hover:decoration-[#8d6a37]" href="mailto:support@fomonomoapp.com?subject=Account%20Deletion%20Request&amp;body=Hello%20FOMO%20NOMO%20Support%2C%0A%0AI%20am%20requesting%20permanent%20deletion%20of%20my%20account.%0A%0AAccount%20email%3A%20%0AFull%20name%3A%20%0ACampus%20(optional)%3A%20%0AReason%20(optional)%3A%20%0A%0AThank%20you.">support@fomonomoapp.com</a></p>
 			</article>
 		</div>
@@ -116,8 +124,8 @@
         <!-- Column 3: Company -->
         <div class="flex flex-col gap-4">
           <h3 class="font-bold text-[#1c0f04]">Company</h3>
-          <a class="transition-colors hover:text-[#735a3e]" href="#">Partner with us</a>
-          <a class="transition-colors hover:text-[#735a3e]" href="#">Collab with us</a>
+          <a class="transition-colors hover:text-[#735a3e]" href="partner.html">Partner with us</a>
+          <a class="transition-colors hover:text-[#735a3e]" href="collab.html">Collab with us</a>
         </div>
 
       </div>
@@ -223,6 +231,16 @@
 				closeMenu(false);
 			});
 		});
+
+		const deleteAccountIconMount = document.getElementById('delete-account-icon');
+		if (deleteAccountIconMount && window.FomoNomoIcons && typeof AssetIcon === 'function') {
+			const deleteAccountIconEl = AssetIcon(FomoNomoIcons.deleteAccountIcon, {
+				size: 24,
+				alt: 'Delete account icon',
+				loading: 'eager'
+			});
+			deleteAccountIconMount.appendChild(deleteAccountIconEl);
+		}
 	})();
 </script>
 </body>
