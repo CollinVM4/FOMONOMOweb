@@ -10,93 +10,122 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
-	.skip-link {
-		position: absolute;
-		top: 0;
-		left: 1rem;
-		transform: translateY(-140%);
-		background: #0b5fff;
-		color: #ffffff;
-		padding: 0.6rem 0.9rem;
-		border-radius: 0.5rem;
-		font-weight: 600;
-		z-index: 100;
-	}
+    .skip-link {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        transform: translateY(-140%);
+        background: #0b5fff;
+        color: #ffffff;
+        padding: 0.6rem 0.9rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        z-index: 100;
+    }
 
-	.skip-link:focus-visible {
-		transform: translateY(0.6rem);
-	}
+    .skip-link:focus-visible {
+        transform: translateY(0.6rem);
+    }
 
-	:where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
-		outline: 3px solid #0b5fff;
-		outline-offset: 3px;
-		box-shadow: 0 0 0 2px #ffffff;
-		border-radius: 0.5rem;
-	}
+    :where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+        outline: 3px solid #0b5fff;
+        outline-offset: 3px;
+        box-shadow: 0 0 0 2px #ffffff;
+        border-radius: 0.5rem;
+    }
 </style>
 </head>
 <body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f5fbf8] text-[#10251b] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="sticky top-0 z-50 border-b border-[#c8e3d6]/70 bg-[#f5fbf8]/90 backdrop-blur-md">
-	<div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
-		<a class="text-[22px] font-bold tracking-tight text-[#174435]" href="index.html">FOMO NOMO</a>
-		<div class="relative">
-			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#c8e3d6]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#4c7666] shadow-[0_8px_20px_rgba(16,37,27,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
-				<span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
-				
-			</button>
-			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#c8e3d6]/80 bg-[#f5fbf8] p-2 opacity-0 shadow-[0_20px_44px_rgba(16,37,27,0.14)] transition-all duration-200" id="site-menu">
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="index.html">Home</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="partner.html">Partner with us</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="collab.html">Collab with us</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="support.html">Contact Support</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="trust-safety.html">Trust &amp; Safety</a>
-			</nav>
-		</div>
-	</div>
+    <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
+        <a class="text-[22px] font-bold tracking-tight text-[#174435]" href="index.html">FOMO NOMO</a>
+        <div class="relative">
+            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#c8e3d6]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#4c7666] shadow-[0_8px_20px_rgba(16,37,27,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+                <span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
+            </button>
+            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#c8e3d6]/80 bg-[#f5fbf8] p-2 opacity-0 shadow-[0_20px_44px_rgba(16,37,27,0.14)] transition-all duration-200" id="site-menu">
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="index.html">Home</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="partner.html">Partner with us</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="collab.html">Collab with us</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="support.html">Contact Support</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="trust-safety.html">Trust &amp; Safety</a>
+            </nav>
+        </div>
+    </div>
 </header>
 
 <main class="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16" id="main-content" tabindex="-1">
-	<section class="overflow-hidden rounded-[28px] border border-[#c8e3d6]/70 bg-white shadow-[0_20px_50px_rgba(16,37,27,0.06)]">
-		<div class="border-b border-[#c8e3d6]/60 bg-gradient-to-br from-[#dbf7ec] via-[#f0fbf6] to-white px-6 py-8 md:px-10 md:py-12">
-			<p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[#4c7666]" style="font-family: 'JetBrains Mono', monospace;">Welcome to FOMO NOMO</p>
-			<h1 class="text-3xl font-bold tracking-tight text-[#174435] md:text-5xl">Community Guidelines</h1>
-			<p class="mt-4 max-w-3xl text-base leading-7 text-[#3f6457] md:text-lg">The app is designed around one question: what is happening next? These guidelines keep the feed relevant, safe, and useful.</p>
-		</div>
+    <section class="overflow-hidden rounded-[28px] border border-[#c8e3d6]/70 bg-white shadow-[0_20px_50px_rgba(16,37,27,0.06)]">
+        <div class="border-b border-[#c8e3d6]/60 bg-gradient-to-br from-[#dbf7ec] via-[#f0fbf6] to-white px-6 py-8 md:px-10 md:py-12">
+            <p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[#4c7666]" style="font-family: 'JetBrains Mono', monospace;">Welcome to FOMO NOMO</p>
+            <h1 class="text-3xl font-bold tracking-tight text-[#174435] md:text-5xl">Community Guidelines</h1>
+            <p class="mt-4 max-w-3xl text-base leading-7 text-[#3f6457] md:text-lg">Our community exists to answer one question: <strong>what is happening next on or near campus?</strong> These standards ensure our feed remains authentic, safe, and spam-free for real student meetups.</p>
+        </div>
 
-		<div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
-			<article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
-				<h2 class="text-[22px] font-semibold text-[#174435]">1. The Core Focus: What Is Happening Next?</h2>
-				<p class="mt-3 text-[15px] leading-7 text-[#3f6457]">FOMO NOMO is built exclusively for discovering, sharing, and organizing upcoming meetups and events. Every post should provide actionable value about an upcoming activity.</p>
-			</article>
+        <div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
+            <!-- 1. Core Purpose -->
+            <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#174435]">1. The Core Standard:</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#3f6457]">FOMO NOMO is built exclusively for organizing, sharing, and discovering real-time events on or around campus. Every post must represent an authentic, upcoming gathering, activity, or meetup with clear time and location details. Posts that do not represent an actual event clutter the feed and will be removed.</p>
+            </article>
 
-			<article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6">
-				<h2 class="text-[22px] font-semibold text-[#174435]">2. Prohibited Content</h2>
-				<ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#3f6457]">
-					<li><strong>Explicit Partying and Illegal Acts:</strong> No promotion of illegal activities, extreme intoxication, or explicit party culture.</li>
-					<li><strong>Sexual Content:</strong> No explicit sexual material, nudity, or suggestive content.</li>
-					<li><strong>Offensive Material:</strong> Harassment, hate speech, bullying, threats, and abusive language are not tolerated.</li>
-					<li>Harassment or targeting of specific individuals.</li>
-					<li>Impersonation of another student, organizer, or institution.</li>
-					<li>Attempts to circumvent the campus email verification process (e.g., sharing or selling .edu access).</li>
-				</ul>
-			</article>
+            <!-- 2. Commercial Spam & Academic Scams -->
+            <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6">
+                <h2 class="text-[22px] font-semibold text-[#174435]">2. Zero Tolerance for Spam &amp; Scams</h2>
+                <p class="mt-2 text-[14px] leading-6 text-[#3f6457]">To keep FOMO NOMO useful, we strictly prohibit:</p>
+                <ul class="mt-3 space-y-2 text-[14px] leading-6 text-[#3f6457]">
+                    <li><strong>Academic Solicitations:</strong> Homework-for-hire, essay writing services, exam leaks, or "do my homework" offers.</li>
+                    <li><strong>Commercial &amp; Business Self-Promotion:</strong> Promoting external businesses, paid services, brand ambassadorships, or affiliate codes.</li>
+                    <li><strong>Unregulated Sales &amp; Scalping:</strong> Selling tickets, illegal substances, contraband, or unauthorized goods.</li>
+                </ul>
+            </article>
 
-			<article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6">
-				<h2 class="text-[22px] font-semibold text-[#174435]">More Prohibited Content</h2>
-				<ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#3f6457]">
-					<li><strong>Self-Promotion and Advertisements:</strong> Don’t use the public feed for commercial ads, spam, or irrelevant self-promotion.</li>
-					<li><strong>Off-Topic Content:</strong> Random musings, memes, and unrelated discussions will be removed.</li>
-				</ul>
-			</article>
+            <!-- 3. Safety & Harassment -->
+            <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6">
+                <h2 class="text-[22px] font-semibold text-[#174435]">3. Safety, Civility &amp; Respect</h2>
+                <p class="mt-2 text-[14px] leading-6 text-[#3f6457]">We strictly enforce a safe, non-threatening environment for all students and campus members:</p>
+                <ul class="mt-3 space-y-2 text-[14px] leading-6 text-[#3f6457]">
+                    <li><strong>Harassment &amp; Bullying:</strong> Targeted abuse, hate speech, body shaming, threats, or call-out posts targeting individuals.</li>
+                    <li><strong>Doxxing &amp; Privacy Violations:</strong> Sharing private phone numbers, addresses, social security info, or private photos without consent.</li>
+                    <li><strong>Sexually Explicit Material:</strong> Nudity, pornography, or sexually suggestive solicitations.</li>
+                    <li><strong>Dangerous Activities:</strong> Organizing activities designed to cause bodily injury, extreme intoxication, or illegal acts.</li>
+                </ul>
+            </article>
 
-			<article class="rounded-[22px] border border-[#c8e3d6] bg-[#174435] p-6 text-white md:col-span-2">
-				<h2 class="text-[22px] font-semibold">3. Enforcement and Moderation</h2>
-				<p class="mt-3 text-[15px] leading-7 text-white/85">To report a user, post, or comment, tap the Report option available on all user-generated content.</p>
-				<p class="mt-4 text-[15px] leading-7 text-white/85">Every post, comment, and profile has an in-app Report option. Reports are reviewed by our moderation team within 24 hours. Blocked users cannot view or interact with your content. Repeat or severe violations will follow an escalation path resulting in content removal, temporary suspension, or permanent account termination.</p>
-			</article>
-		</div>
-	</section>
+            <!-- 4. Account Integrity & Verification -->
+            <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#174435]">4. Authenticity &amp; Campus Verification Integrity</h2>
+                <div class="mt-3 grid gap-4 md:grid-cols-2 text-[15px] leading-7 text-[#3f6457]">
+                    <div>
+                        <p class="font-semibold text-[#174435]">Impersonation &amp; Deception</p>
+                        <p class="mt-1 text-[14px] leading-6">Creating fake profiles, impersonating other students, faculty, or registered campus organizations is strictly forbidden and results in an immediate permanent ban.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[#174435]">Verification Circumvention</p>
+                        <p class="mt-1 text-[14px] leading-6">Selling, sharing, or bypassing campus <code>.edu</code> email verification to give unauthorized non-students access to private campus feeds is strictly prohibited.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Real-World Host Responsibilities -->
+            <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#174435]">5. Event Host &amp; Attendee Responsibilities</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#3f6457]">When hosting an event through FOMO NOMO, you are responsible for maintaining a safe and respectful space. Event organizers must provide accurate venue details and adhere to local university, municipal, and state laws. Hosts retain full discretion to remove disruptive individuals from attendee lists using built-in host controls.</p>
+            </article>
+
+            <!-- 6. Moderation & Enforcement -->
+            <article class="rounded-[22px] border border-[#c8e3d6] bg-[#174435] p-6 text-white md:col-span-2">
+                <h2 class="text-[22px] font-semibold">6. Moderation, Reporting &amp; Account Penalties</h2>
+                <p class="mt-3 text-[15px] leading-7 text-white/85">Every post, comment, and user profile features an easily accessible in-app <strong>Report</strong> option. Our moderation team active reviews flagged content within <strong>24 hours</strong>. Depending on severity, policy violations carry progressive penalties:</p>
+                <ul class="mt-4 grid gap-2 sm:grid-cols-3 text-[14px] text-white/90">
+                    <li class="rounded-xl border border-white/20 bg-white/10 p-3"><strong>1. Content Removal:</strong> Offending posts or comments are deleted immediately without notice.</li>
+                    <li class="rounded-xl border border-white/20 bg-white/10 p-3"><strong>2. Account Suspension:</strong> Temporary 7-to-30 day lockouts for repeated or moderate violations.</li>
+                    <li class="rounded-xl border border-white/20 bg-white/10 p-3"><strong>3. Permanent Ban:</strong> Zero-tolerance bans for illegal acts, harassment, doxxing, or account spoofing.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
 </main>
 <footer class="border-t border-[#d2c4bb]/60 bg-[#f0edea]">
   <div class="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">
@@ -119,7 +148,7 @@
         <div class="flex flex-col gap-4">
           <h3 class="font-bold text-[#1c0f04]">Safety</h3>
           <a class="transition-colors hover:text-[#735a3e]" href="support.html">Contact Support</a>
-          <a class="transition-colors hover:text-[#735a3e]" href="trust-safety.html">Trust & Safety</a>
+          <a class="transition-colors hover:text-[#735a3e]" href="trust-safety.html">Trust &amp; Safety</a>
           <a class="transition-colors hover:text-[#735a3e]" href="delete-account.html">Delete Account</a>
         </div>
 
@@ -152,96 +181,96 @@
 </footer>
 <script src="assets/fomo-icons.js"></script>
 <script>
-	(function () {
-		const toggle = document.getElementById('menu-toggle');
-		const menu = document.getElementById('site-menu');
-		const icon = document.getElementById('menu-icon');
+    (function () {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('site-menu');
+        const icon = document.getElementById('menu-icon');
 
-		if (!toggle || !menu || !icon) {
-			return;
-		}
+        if (!toggle || !menu || !icon) {
+            return;
+        }
 
-		const focusableMenuItems = function () {
-			return Array.prototype.slice.call(menu.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
-		};
+        const focusableMenuItems = function () {
+            return Array.prototype.slice.call(menu.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+        };
 
-		const openMenu = function () {
-			menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
-			menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
-			toggle.setAttribute('aria-expanded', 'true');
-			icon.textContent = 'close';
+        const openMenu = function () {
+            menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+            menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+            toggle.setAttribute('aria-expanded', 'true');
+            icon.textContent = 'close';
 
-			const items = focusableMenuItems();
-			if (items.length) {
-				items[0].focus();
-			}
-		};
+            const items = focusableMenuItems();
+            if (items.length) {
+                items[0].focus();
+            }
+        };
 
-		const closeMenu = function (restoreFocus) {
-			menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
-			menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
-			toggle.setAttribute('aria-expanded', 'false');
-			icon.textContent = 'menu';
+        const closeMenu = function (restoreFocus) {
+            menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+            menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+            toggle.setAttribute('aria-expanded', 'false');
+            icon.textContent = 'menu';
 
-			if (restoreFocus) {
-				toggle.focus();
-			}
-		};
+            if (restoreFocus) {
+                toggle.focus();
+            }
+        };
 
-		const isOpen = function () {
-			return toggle.getAttribute('aria-expanded') === 'true';
-		};
+        const isOpen = function () {
+            return toggle.getAttribute('aria-expanded') === 'true';
+        };
 
-		toggle.addEventListener('click', function (event) {
-			event.stopPropagation();
-			if (isOpen()) {
-				closeMenu(true);
-			} else {
-				openMenu();
-			}
-		});
+        toggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            if (isOpen()) {
+                closeMenu(true);
+            } else {
+                openMenu();
+            }
+        });
 
-		document.addEventListener('click', function (event) {
-			if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-				closeMenu(false);
-			}
-		});
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                closeMenu(false);
+            }
+        });
 
-		document.addEventListener('keydown', function (event) {
-			if (!isOpen()) {
-				return;
-			}
+        document.addEventListener('keydown', function (event) {
+            if (!isOpen()) {
+                return;
+            }
 
-			if (event.key === 'Escape' && isOpen()) {
-				closeMenu(true);
-				return;
-			}
+            if (event.key === 'Escape' && isOpen()) {
+                closeMenu(true);
+                return;
+            }
 
-			if (event.key === 'Tab') {
-				const items = focusableMenuItems();
-				if (!items.length) {
-					return;
-				}
+            if (event.key === 'Tab') {
+                const items = focusableMenuItems();
+                if (!items.length) {
+                    return;
+                }
 
-				const first = items[0];
-				const last = items[items.length - 1];
+                const first = items[0];
+                const last = items[items.length - 1];
 
-				if (event.shiftKey && document.activeElement === first) {
-					event.preventDefault();
-					last.focus();
-				} else if (!event.shiftKey && document.activeElement === last) {
-					event.preventDefault();
-					first.focus();
-				}
-			}
-		});
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            }
+        });
 
-		menu.querySelectorAll('a').forEach(function (link) {
-			link.addEventListener('click', function () {
-				closeMenu(false);
-			});
-		});
-	})();
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                closeMenu(false);
+            });
+        });
+    })();
 </script>
 </body>
 </html>

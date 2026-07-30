@@ -10,110 +10,119 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
-	.skip-link {
-		position: absolute;
-		top: 0;
-		left: 1rem;
-		transform: translateY(-140%);
-		background: #0b5fff;
-		color: #ffffff;
-		padding: 0.6rem 0.9rem;
-		border-radius: 0.5rem;
-		font-weight: 600;
-		z-index: 100;
-	}
+    .skip-link {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        transform: translateY(-140%);
+        background: #0b5fff;
+        color: #ffffff;
+        padding: 0.6rem 0.9rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        z-index: 100;
+    }
 
-	.skip-link:focus-visible {
-		transform: translateY(0.6rem);
-	}
+    .skip-link:focus-visible {
+        transform: translateY(0.6rem);
+    }
 
-	:where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
-		outline: 3px solid #0b5fff;
-		outline-offset: 3px;
-		box-shadow: 0 0 0 2px #ffffff;
-		border-radius: 0.5rem;
-	}
+    :where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+        outline: 3px solid #0b5fff;
+        outline-offset: 3px;
+        box-shadow: 0 0 0 2px #ffffff;
+        border-radius: 0.5rem;
+    }
 </style>
 </head>
 <body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f7f8fb] text-[#15171d] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="sticky top-0 z-50 border-b border-[#d7deea]/70 bg-[#f7f8fb]/90 backdrop-blur-md">
-	<div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
-		<a class="text-[22px] font-bold tracking-tight text-[#232a3a]" href="index.html">FOMO NOMO</a>
-		<div class="relative">
-			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#d7deea]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#5f6d84] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
-				<span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
-				
-			</button>
-			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#d7deea]/80 bg-[#f7f8fb] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="index.html">Home</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="partner.html">Partner with us</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="collab.html">Collab with us</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="support.html">Contact Support</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="trust-safety.html">Trust &amp; Safety</a>
-			</nav>
-		</div>
-	</div>
+    <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
+        <a class="text-[22px] font-bold tracking-tight text-[#232a3a]" href="index.html">FOMO NOMO</a>
+        <div class="relative">
+            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#d7deea]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#5f6d84] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+                <span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
+            </button>
+            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#d7deea]/80 bg-[#f7f8fb] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="index.html">Home</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="partner.html">Partner with us</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="collab.html">Collab with us</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="support.html">Contact Support</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="trust-safety.html">Trust &amp; Safety</a>
+            </nav>
+        </div>
+    </div>
 </header>
 
 <main class="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16" id="main-content" tabindex="-1">
-	<section class="overflow-hidden rounded-[28px] border border-[#d7deea]/70 bg-white shadow-[0_20px_50px_rgba(21,23,29,0.06)]">
-		<div class="border-b border-[#d7deea]/60 bg-gradient-to-br from-[#eaf0f8] via-[#f7f9fc] to-white px-6 py-8 md:px-10 md:py-12">
-			<p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[#5f6d84]" style="font-family: 'JetBrains Mono', monospace;">Effective Date: July 3, 2026</p>
-			<h1 class="text-3xl font-bold tracking-tight text-[#232a3a] md:text-5xl">Terms of Service</h1>
-			<p class="mt-4 max-w-3xl text-base leading-7 text-[#4b5568] md:text-lg"></p>
-		</div>
+    <section class="overflow-hidden rounded-[28px] border border-[#d7deea]/70 bg-white shadow-[0_20px_50px_rgba(21,23,29,0.06)]">
+        <div class="border-b border-[#d7deea]/60 bg-gradient-to-br from-[#eaf0f8] via-[#f7f9fc] to-white px-6 py-8 md:px-10 md:py-12">
+            <p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[#5f6d84]" style="font-family: 'JetBrains Mono', monospace;">Effective Date: July 30, 2026</p>
+            <h1 class="text-3xl font-bold tracking-tight text-[#232a3a] md:text-5xl">Terms of Service</h1>
+            <p class="mt-4 max-w-3xl text-base leading-7 text-[#4b5568] md:text-lg">Please read these Terms of Service carefully before accessing or using FOMO NOMO. By using the platform, you agree to be bound by all terms, conditions, and waivers set forth below.</p>
+        </div>
 
-		<div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">1. Acceptance of Terms</h2>
-				<p class="mt-3 text-[15px] leading-7 text-[#4b5568]">By downloading, accessing, or using the mobile application provided by FOMO NOMO LLC, you agree to be bound by these Terms of Service.</p>
-			</article>
+        <div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">1. Acceptance of Terms &amp; Eligibility</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">By downloading, registering for, accessing, or using the mobile application or website provided by FOMO NOMO LLC ("FOMO NOMO," "we," "us," or "our"), you enter into a legally binding agreement to comply with and be bound by these Terms of Service. You represent and warrant that you are at least 13 years of age (or the legal minimum age in your jurisdiction) and possess the legal authority to enter into these Terms.</p>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">2. Description of Service</h2>
-				<p class="mt-3 text-[15px] leading-7 text-[#4b5568]">FOMO NOMO helps users discover, share, and interact with localized events and user-generated content. The service includes public feeds, commenting, and event promotion tools.</p>
-			</article>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">2. Service Description &amp; Modifications</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">FOMO NOMO provides an interactive platform enabling users to discover, publish, share, and interact with localized event information and user-generated content. We reserve the right to modify, suspend, restrict, or discontinue any portion of the service at any time, with or without notice, and without liability to you.</p>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">3. User Accounts and Subscriptions</h2>
-				<ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#4b5568]">
-					<li><strong>Account Creation:</strong> Keep your account credentials confidential and remain responsible for activity under your account.</li>
-					<li><strong>Free and Premium Tiers:</strong> Basic access is free. Organizer Pro includes extended 14-day posting, boosted priority, and a custom badge.</li>
-					<li><strong>Payments:</strong> Subscriptions are billed on a recurring basis and managed through app store settings.</li>
-				</ul>
-			</article>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">3. Account Registration &amp; Security</h2>
+                <ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#4b5568]">
+                    <li><strong>Account Security:</strong> You are strictly responsible for maintaining the confidentiality of your login credentials and for all activities conducted through your account.</li>
+                    <li><strong>Accurate Information:</strong> You agree to provide accurate, current, and complete information during registration and to keep your profile updated.</li>
+                    <li><strong>Account Termination:</strong> We reserve the absolute right to suspend, disable, or delete your account immediately for any reason, including violations of these Terms.</li>
+                </ul>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">4. User-Generated Content and Conduct</h2>
-				<ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#4b5568]">
-					<li><strong>Content Ownership:</strong> You retain ownership of the content you post.</li>
-					<li><strong>Acceptable Use:</strong> Do not post illegal, abusive, harassing, or guideline-violating content.</li>
-					<li><strong>Moderation:</strong> We may remove violating content or terminate accounts at our discretion.</li>
-				</ul>
-			</article>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">4. User Content License &amp; Prohibited Conduct</h2>
+                <div class="mt-3 grid gap-4 md:grid-cols-2 text-[15px] leading-7 text-[#4b5568]">
+                    <div>
+                        <p class="font-semibold text-[#232a3a]">Content Rights &amp; License Grant</p>
+                        <p class="mt-1">You retain ownership of the content you submit. However, by posting content to FOMO NOMO, you grant us a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, use, display, reproduce, modify, and distribute your content across the platform.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-[#232a3a]">Strictly Prohibited Actions</p>
+                        <p class="mt-1">You may not post illegal, harassing, defamatory, sexually explicit, or fraudulent content. You are strictly forbidden from scraping data, reverse-engineering the application, using automated bots, impersonating others, or spamming the community.</p>
+                    </div>
+                </div>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">5. Real-World Meetups and Assumption of Risk</h2>
-				<p class="mt-3 text-[15px] leading-7 text-[#4b5568]">FOMO NOMO only provides the digital infrastructure for event discovery. We do not organize, host, or endorse real-world events posted by users, and you assume the risks associated with meeting people in person.</p>
-			</article>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">5. Real-World Interactions &amp; Express Assumption of Risk</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">FOMO NOMO functions solely as a passive digital bulletin board for discovering events and social gatherings. We do not host, organize, manage, vet, verify, or background-check any event, host, or attendee. <strong>YOU EXPRESSLY ASSUME ALL RISKS</strong> associated with attending in-person events, meeting third parties, or participating in activities discovered through the platform. You agree that FOMO NOMO LLC shall not be liable for any personal injury, death, property damage, harassment, emotional distress, or loss resulting from your real-world interactions.</p>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">6. Disclaimers and Limitation of Liability</h2>
-				<p class="mt-3 text-[15px] leading-7 text-[#4b5568]">The application is provided on an AS IS and AS AVAILABLE basis. To the maximum extent permitted by law, FOMO NOMO LLC is not liable for indirect, incidental, special, or consequential damages.</p>
-			</article>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">6. Warranties &amp; Limitation of Liability</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, FOMO NOMO LLC DISCLAIMS ALL WARRANTIES AND SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, DATA, OR GOODWILL. IN NO EVENT SHALL OUR TOTAL AGGREGATE LIABILITY EXCEED $100 USD.</p>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-				<h2 class="text-[22px] font-semibold text-[#232a3a]">7. Governing Law</h2>
-				<p class="mt-3 text-[15px] leading-7 text-[#4b5568]">These Terms are governed by the laws of the State of Florida, and legal actions arising under them will be brought in Florida courts.</p>
-			</article>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">7. Indemnification</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">You agree to defend, indemnify, and hold harmless FOMO NOMO LLC, its officers, directors, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including legal fees) arising out of or related to your use of the app, your content, your violation of these Terms, or your attendance at any offline event.</p>
+            </article>
 
-			<article class="rounded-[22px] border border-[#d7deea] bg-[#232a3a] p-6 text-white md:col-span-2">
-				<h2 class="text-[22px] font-semibold">8. Changes to Terms and Contact Information</h2>
-				<p class="mt-3 text-[15px] leading-7 text-white/85">We may modify these Terms of Service at any time. Continued use of the application means you accept the changes. For questions, contact FOMO NOMO LLC at support@fomonomoapp.com.</p>
-			</article>
-		</div>
-	</section>
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
+                <h2 class="text-[22px] font-semibold text-[#232a3a]">8. Governing Law, Arbitration &amp; Class Action Waiver</h2>
+                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">These Terms are governed by and construed in accordance with the laws of the State of Florida, without regard to conflict of law principles. You agree to submit to the exclusive personal jurisdiction of courts located in Florida. <strong>YOU AND FOMO NOMO AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</strong></p>
+            </article>
+
+            <article class="rounded-[22px] border border-[#d7deea] bg-[#232a3a] p-6 text-white md:col-span-2">
+                <h2 class="text-[22px] font-semibold">9. Changes to Terms, Severability &amp; Contact Information</h2>
+                <p class="mt-3 text-[15px] leading-7 text-white/85">We reserve the right to revise these Terms at any time. Continued access or use of FOMO NOMO following any updates constitutes acceptance of the modified Terms. If any provision is deemed unenforceable, the remaining provisions will remain in full force and effect. For questions, contact FOMO NOMO LLC at <a class="underline hover:text-white" href="mailto:support@fomonomoapp.com">support@fomonomoapp.com</a>.</p>
+            </article>
+        </div>
+    </section>
 </main>
 <footer class="border-t border-[#d2c4bb]/60 bg-[#f0edea]">
   <div class="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">
@@ -136,7 +145,7 @@
         <div class="flex flex-col gap-4">
           <h3 class="font-bold text-[#1c0f04]">Safety</h3>
           <a class="transition-colors hover:text-[#735a3e]" href="support.html">Contact Support</a>
-          <a class="transition-colors hover:text-[#735a3e]" href="trust-safety.html">Trust & Safety</a>
+          <a class="transition-colors hover:text-[#735a3e]" href="trust-safety.html">Trust &amp; Safety</a>
           <a class="transition-colors hover:text-[#735a3e]" href="delete-account.html">Delete Account</a>
         </div>
 
@@ -169,96 +178,96 @@
 </footer>
 <script src="assets/fomo-icons.js"></script>
 <script>
-	(function () {
-		const toggle = document.getElementById('menu-toggle');
-		const menu = document.getElementById('site-menu');
-		const icon = document.getElementById('menu-icon');
+    (function () {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('site-menu');
+        const icon = document.getElementById('menu-icon');
 
-		if (!toggle || !menu || !icon) {
-			return;
-		}
+        if (!toggle || !menu || !icon) {
+            return;
+        }
 
-		const focusableMenuItems = function () {
-			return Array.prototype.slice.call(menu.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
-		};
+        const focusableMenuItems = function () {
+            return Array.prototype.slice.call(menu.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+        };
 
-		const openMenu = function () {
-			menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
-			menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
-			toggle.setAttribute('aria-expanded', 'true');
-			icon.textContent = 'close';
+        const openMenu = function () {
+            menu.classList.remove('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+            menu.classList.add('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+            toggle.setAttribute('aria-expanded', 'true');
+            icon.textContent = 'close';
 
-			const items = focusableMenuItems();
-			if (items.length) {
-				items[0].focus();
-			}
-		};
+            const items = focusableMenuItems();
+            if (items.length) {
+                items[0].focus();
+            }
+        };
 
-		const closeMenu = function (restoreFocus) {
-			menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
-			menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
-			toggle.setAttribute('aria-expanded', 'false');
-			icon.textContent = 'menu';
+        const closeMenu = function (restoreFocus) {
+            menu.classList.remove('visible', 'pointer-events-auto', 'opacity-100', 'translate-y-0');
+            menu.classList.add('invisible', 'pointer-events-none', 'opacity-0', 'translate-y-2');
+            toggle.setAttribute('aria-expanded', 'false');
+            icon.textContent = 'menu';
 
-			if (restoreFocus) {
-				toggle.focus();
-			}
-		};
+            if (restoreFocus) {
+                toggle.focus();
+            }
+        };
 
-		const isOpen = function () {
-			return toggle.getAttribute('aria-expanded') === 'true';
-		};
+        const isOpen = function () {
+            return toggle.getAttribute('aria-expanded') === 'true';
+        };
 
-		toggle.addEventListener('click', function (event) {
-			event.stopPropagation();
-			if (isOpen()) {
-				closeMenu(true);
-			} else {
-				openMenu();
-			}
-		});
+        toggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            if (isOpen()) {
+                closeMenu(true);
+            } else {
+                openMenu();
+            }
+        });
 
-		document.addEventListener('click', function (event) {
-			if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-				closeMenu(false);
-			}
-		});
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                closeMenu(false);
+            }
+        });
 
-		document.addEventListener('keydown', function (event) {
-			if (!isOpen()) {
-				return;
-			}
+        document.addEventListener('keydown', function (event) {
+            if (!isOpen()) {
+                return;
+            }
 
-			if (event.key === 'Escape' && isOpen()) {
-				closeMenu(true);
-				return;
-			}
+            if (event.key === 'Escape' && isOpen()) {
+                closeMenu(true);
+                return;
+            }
 
-			if (event.key === 'Tab') {
-				const items = focusableMenuItems();
-				if (!items.length) {
-					return;
-				}
+            if (event.key === 'Tab') {
+                const items = focusableMenuItems();
+                if (!items.length) {
+                    return;
+                }
 
-				const first = items[0];
-				const last = items[items.length - 1];
+                const first = items[0];
+                const last = items[items.length - 1];
 
-				if (event.shiftKey && document.activeElement === first) {
-					event.preventDefault();
-					last.focus();
-				} else if (!event.shiftKey && document.activeElement === last) {
-					event.preventDefault();
-					first.focus();
-				}
-			}
-		});
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            }
+        });
 
-		menu.querySelectorAll('a').forEach(function (link) {
-			link.addEventListener('click', function () {
-				closeMenu(false);
-			});
-		});
-	})();
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                closeMenu(false);
+            });
+        });
+    })();
 </script>
 </body>
 </html>
