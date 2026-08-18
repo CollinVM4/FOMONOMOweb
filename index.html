@@ -77,11 +77,21 @@
 <main class="flex-1" id="main-content" tabindex="-1">
   <section class="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-4 py-14 text-center md:px-8 md:py-20">
     <div class="max-w-4xl space-y-6">
-      <h1 class="text-4xl font-bold tracking-tight text-[#1c0f04] md:text-6xl">Putting the 'Social' Back in Social Media</h1>
-      <p class="mx-auto max-w-2xl text-base leading-7 text-[#4e453e] md:text-lg">
-        Never miss out again. Real posts from people on your campus, answering one question: what's happening next?
-      </p>
-    </div>
+  <h1 class="animate-[slide-up_1s_ease-out] text-4xl font-bold tracking-tight text-[#1c0f04] opacity-0 animate-fill-forwards md:text-6xl" style="animation: slide-up 0.8s ease-out forwards;">
+    Putting the <span class="text-[#735a3e]">'Social'</span> Back in Social Media
+  </h1>
+  <p class="mx-auto max-w-2xl text-base leading-7 text-[#4e453e] opacity-0 md:text-lg" style="animation: slide-up 1s ease-out 0.2s forwards;">
+    Never miss out again. Real posts from people on your campus, answering one question: <span class="font-semibold text-[#1c0f04]">what's happening next?</span>
+  </p>
+  
+  <!-- subtle float animation -->
+  <style>
+    @keyframes slide-up {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</div>
     
     <div class="flex flex-col gap-4 sm:flex-row relative z-10">
       <a class="inline-flex transition-transform hover:-translate-y-0.5" href="ios.html" aria-label="Download on the App Store">
@@ -130,7 +140,10 @@
         <p class="text-xl italic leading-8 text-[#4e453e] md:text-2xl">
           "I wished something like this existed when I was starting college. A way to actually find what's happening around campus, and not just scroll past it. So I built FOMO NOMO!"
         </p>
-        <p class="mt-4 text-sm font-semibold text-[#1c0f04]">— Collin, UCF Student & Founder</p>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <p class="text-sm font-semibold text-[#1c0f04]">— Collin, UCF Student &amp; Founder</p>
+          <a class="inline-flex items-center rounded-full border border-[#735a3e]/40 px-4 py-2 text-xs font-semibold text-[#735a3e] transition-colors hover:bg-[#735a3e] hover:text-white" href="about.html">Meet the Founder</a>
+        </div>
       </section>
     </div>
   </section>
