@@ -15,7 +15,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#ffffff">
 <!-- Open Graph / Social Media Preview -->
-<meta property="og:title" content="College Event Discovery | FOMO NOMO" />
+<meta property="og:title" content="What's happening next on campus!" />
 <meta property="og:description" content="Discover what's happening next! We only feature upcoming local events. Download FOMO NOMO and get outside!" />
 <meta property="og:url" content="https://fomonomoapp.com/" />
 <meta property="og:site_name" content="FOMO NOMO" />
@@ -24,7 +24,7 @@
 
 <!-- Twitter/X Card (for better rendering on Twitter) -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="College Event Discovery | FOMO NOMO" />
+<meta name="twitter:title" content="What's happening next on campus!" />
 <meta name="twitter:description" content="Discover what's happening next! We only feature upcoming local events. Download FOMO NOMO and get outside!" />
 <meta name="twitter:image" content="https://fomonomoapp.com/assets/og-image.png" />
 <script type="application/ld+json">
@@ -137,6 +137,227 @@
     box-shadow: 0 0 0 2px #ffffff;
     border-radius: 0.5rem;
   }
+
+  .value-proposition-section {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .value-proposition-section::before {
+    position: absolute;
+    z-index: -1;
+    top: 13%;
+    left: 50%;
+    width: min(58rem, 82%);
+    height: 70%;
+    content: '';
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: radial-gradient(ellipse, rgba(252, 218, 182, 0.62) 0%, rgba(252, 249, 246, 0) 68%);
+    filter: blur(22px);
+    transition: background 500ms ease;
+  }
+
+  .value-stack {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    padding: 2.5rem 1rem 2rem;
+    perspective: 1300px;
+  }
+
+  .value-card {
+    position: relative;
+    min-height: 15.5rem;
+    padding: 4.25rem 1.75rem 1.75rem;
+    overflow: visible;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-left-color: rgba(255, 255, 255, 0.98);
+    border-top-color: rgba(255, 255, 255, 1);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.57);
+    box-shadow: 0 22px 46px rgba(60, 37, 18, 0.13), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    opacity: 1;
+    transform-style: preserve-3d;
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 420ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 420ms ease, border-color 420ms ease, background-color 420ms ease;
+  }
+
+  .value-card::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    border-radius: inherit;
+    background: linear-gradient(125deg, rgba(255, 255, 255, 0.42), transparent 34%);
+    opacity: 0;
+    transition: opacity 350ms ease;
+  }
+
+  .value-card:nth-child(1) {
+    z-index: 1;
+    transform: translate3d(1.5rem, 0.7rem, 0) rotateY(7deg) rotateZ(-2deg);
+  }
+
+  .value-card:nth-child(2) {
+    z-index: 3;
+    margin: -1rem;
+    transform: translate3d(0, -1.3rem, 2rem) rotateX(2deg) rotateZ(1deg);
+  }
+
+  .value-card:nth-child(3) {
+    z-index: 2;
+    transform: translate3d(-1.5rem, 0.9rem, 0) rotateY(-7deg) rotateZ(2deg);
+  }
+
+  .value-card.is-visible {
+    opacity: 1;
+  }
+
+  .value-card.is-visible:nth-child(2) {
+    transition-delay: 0ms;
+  }
+
+  .value-card.is-visible:nth-child(3) {
+    transition-delay: 0ms;
+  }
+
+  .value-card:hover,
+  .value-card:focus-within,
+  .value-card.is-active {
+    z-index: 5;
+    border-color: rgba(252, 218, 182, 0.95);
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 0 30px 58px rgba(75, 43, 18, 0.2), 0 0 0 5px rgba(252, 218, 182, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    transform: translate3d(0, -1.15rem, 3.5rem) rotateX(0) rotateY(0) rotateZ(0) scale(1.025);
+  }
+
+  .value-card.is-visible:hover,
+  .value-card.is-visible:focus-within,
+  .value-card.is-visible.is-active {
+    transition-delay: 0ms;
+  }
+
+  .value-card:hover::after,
+  .value-card:focus-within::after,
+  .value-card.is-active::after {
+    opacity: 1;
+  }
+
+  .value-card h2 {
+    position: relative;
+    z-index: 1;
+    transition: transform 350ms ease;
+  }
+
+  .value-card:hover h2,
+  .value-card:focus-within h2,
+  .value-card.is-active h2 {
+    transform: scale(1.035);
+  }
+
+  .value-icon-badge {
+    position: absolute;
+    top: -1.45rem;
+    left: 1.5rem;
+    display: grid;
+    width: 4.25rem;
+    height: 4.25rem;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 1.1rem;
+    background: linear-gradient(135deg, #fcdab6, #ddc1ae 52%, #735a3e);
+    box-shadow: 0 12px 24px rgba(75, 43, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    transform: translateZ(1.5rem) rotate(-6deg);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+  }
+
+  .value-icon-badge::before,
+  .value-icon-badge::after {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 999px;
+    content: '';
+    opacity: 0.75;
+  }
+
+  .value-icon-badge::before {
+    width: 0.65rem;
+    height: 0.65rem;
+    top: 0.35rem;
+    right: 0.45rem;
+  }
+
+  .value-icon-badge::after {
+    width: 0.35rem;
+    height: 0.35rem;
+    right: -0.45rem;
+    bottom: 0.65rem;
+    animation: badge-sparkle 2.6s ease-in-out infinite;
+  }
+
+  .value-icon-badge img {
+    position: relative;
+    z-index: 1;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(15%) saturate(2500%) hue-rotate(343deg) brightness(84%) contrast(98%);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .value-card:hover .value-icon-badge,
+  .value-card:focus-within .value-icon-badge,
+  .value-card.is-active .value-icon-badge {
+    box-shadow: 0 18px 30px rgba(75, 43, 18, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.76);
+    transform: translate3d(-0.3rem, -0.45rem, 3rem) rotate(4deg);
+  }
+
+  .value-card:hover .value-icon-badge img,
+  .value-card:focus-within .value-icon-badge img,
+  .value-card.is-active .value-icon-badge img {
+    transform: translate3d(0.2rem, -0.2rem, 1rem) rotate(-10deg) scale(1.12);
+  }
+
+  @keyframes badge-sparkle {
+    0%, 100% { transform: scale(0.8); opacity: 0.45; }
+    50% { transform: scale(1.35); opacity: 1; }
+  }
+
+  @media (max-width: 767px) {
+    .value-stack {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      max-width: 31rem;
+      margin: 0 auto;
+      padding: 2.5rem 0 1rem;
+    }
+
+    .value-card,
+    .value-card:nth-child(1),
+    .value-card:nth-child(2),
+    .value-card:nth-child(3) {
+      min-height: 0;
+      margin: 0;
+      transform: none;
+    }
+
+    .value-card:hover,
+    .value-card:focus-within,
+    .value-card.is-active {
+      transform: translateY(-0.5rem) scale(1.01);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .value-card,
+    .value-icon-badge,
+    .value-icon-badge img,
+    .value-icon-badge::after,
+    .value-card h2 {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .value-card { opacity: 1; }
+  }
 </style>
 </head>
 <body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen flex flex-col bg-[#fcf9f6] text-[#1b1c1a] antialiased">
@@ -214,40 +435,41 @@
     </div>
   </section>
 
-  <section class="mx-auto w-full max-w-7xl px-4 pb-16 md:px-8 md:pb-24">
-    <div class="grid gap-6 md:grid-cols-3">
-      <article class="rounded-[24px] border border-[#d2c4bb]/70 bg-[#e5e2df] p-6 shadow-[0_18px_40px_rgba(28,15,4,0.06)] transition-transform duration-300 hover:-translate-y-1">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#332316]/10 text-[#332316]">
-          <span aria-hidden="true" id="feature-icon-speaker"></span>
+  <section class="value-proposition-section mx-auto w-full max-w-7xl px-4 pb-16 md:px-8 md:pb-24" aria-label="Why FOMO NOMO">
+    <div class="value-stack">
+      <article class="value-card" data-value-card>
+        <div class="value-icon-badge" aria-hidden="true">
+          <span id="feature-icon-speaker"></span>
         </div>
         <h2 class="text-[22px] font-semibold text-[#1c0f04]">BUILT FOR THE FUTURE</h2>
         <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">Stop scrolling through what you already missed. Start discovering what's next. We only feature posts happening in the future. </p>
       </article>
 
-      <article class="rounded-[24px] border border-[#d2c4bb]/70 bg-[#e5e2df] p-6 shadow-[0_18px_40px_rgba(28,15,4,0.06)] transition-transform duration-300 hover:-translate-y-1">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#735a3e]/10 text-[#735a3e]">
-          <span aria-hidden="true" id="feature-icon-going"></span>
+      <article class="value-card" data-value-card>
+        <div class="value-icon-badge" aria-hidden="true">
+          <span id="feature-icon-going"></span>
         </div>
-       <h2 class="text-[22px] font-semibold text-[#1c0f04]">POWER TO THE PEOPLE</h2>
-        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">If you can host it, you can post it.</br> Easily reach people right on your campus who are actively looking for something to do.</p>
+        <h2 class="text-[22px] font-semibold text-[#1c0f04]">POWER TO THE PEOPLE</h2>
+        <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">If you can host it, you can post it.<br> Easily reach people right on your campus who are actively looking for something to do.</p>
       </article>
 
-      <article class="rounded-[24px] border border-[#d2c4bb]/70 bg-[#e5e2df] p-6 shadow-[0_18px_40px_rgba(28,15,4,0.06)] transition-transform duration-300 hover:-translate-y-1">
-        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#2d2519]/10 text-[#171006]">
-            <span aria-hidden="true" id="feature-icon-star"></span>
+      <article class="value-card" data-value-card>
+        <div class="value-icon-badge" aria-hidden="true">
+          <span id="feature-icon-star"></span>
         </div>
         <h2 class="text-[22px] font-semibold text-[#1c0f04]">GET OUT AND GO</h2>
         <p class="mt-3 text-[14px] leading-6 text-[#4e453e]">We give you the who, what, and where, so you can spend less time staring at a screen and more time showing up.</p>
       </article>
-      <section class="mx-auto w-full max-w-3xl px-4 pb-16 text-center md:col-span-3 md:px-0">
-        <p class="text-xl italic leading-8 text-[#4e453e] md:text-2xl">
-          "I wished something like this existed when I was starting college. A way to actually find what's happening around campus, and not just scroll past it. So I built FOMO NOMO!"
-        </p>
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
-          <p class="text-sm font-semibold text-[#1c0f04]">— Collin, UCF Student &amp; Founder</p>
-          <a class="inline-flex items-center rounded-full border border-[#735a3e]/40 px-4 py-2 text-xs font-semibold text-[#735a3e] transition-colors hover:bg-[#735a3e] hover:text-white" href="about.html">Meet the Founder</a>
-        </div>
-      </section>
+    </div>
+    <section class="mx-auto mt-8 w-full max-w-3xl px-4 pb-4 text-center md:px-0">
+      <p class="text-xl italic leading-8 text-[#4e453e] md:text-2xl">
+        "I wished something like this existed when I was starting college. A way to actually find what's happening around campus, and not just scroll past it. So I built FOMO NOMO!"
+      </p>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+        <p class="text-sm font-semibold text-[#1c0f04]">- Collin, UCF Student &amp; Founder</p>
+        <a class="inline-flex items-center rounded-full border border-[#735a3e]/40 px-4 py-2 text-xs font-semibold text-[#735a3e] transition-colors hover:bg-[#735a3e] hover:text-white" href="about.html">Meet the Founder</a>
+      </div>
+    </section>
     </div>
   </section>
 
@@ -421,6 +643,50 @@
       renderFeatureIcon('feature-icon-speaker', FomoNomoIcons.speakerIcon, 'Speaker icon');
       renderFeatureIcon('feature-icon-going', FomoNomoIcons.goingIcon, 'Going icon');
       renderFeatureIcon('feature-icon-star', FomoNomoIcons.starIcon, 'Star icon');
+    }
+
+    const valueCards = document.querySelectorAll('[data-value-card]');
+    if (valueCards.length) {
+      let valueCardsShown = false;
+      const showValueCards = function () {
+        if (valueCardsShown) {
+          return;
+        }
+
+        valueCardsShown = true;
+        valueCards.forEach(function (card) {
+          card.classList.add('is-visible');
+        });
+      };
+
+      if ('IntersectionObserver' in window) {
+        const valueCardObserver = new IntersectionObserver(function (entries) {
+          let activeEntry = null;
+
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              if (!activeEntry || entry.intersectionRatio > activeEntry.intersectionRatio) {
+                activeEntry = entry;
+              }
+            }
+          });
+
+          if (activeEntry) {
+            valueCards.forEach(function (card) {
+              card.classList.toggle('is-active', card === activeEntry.target);
+            });
+          }
+        }, { threshold: [0.2, 0.55, 0.8] });
+
+        valueCards.forEach(function (card) {
+          valueCardObserver.observe(card);
+        });
+      } else {
+        showValueCards();
+      }
+
+      window.setTimeout(showValueCards, 1000);
     }
 
     const carouselImage = document.getElementById('app-carousel-image');
