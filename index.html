@@ -180,7 +180,7 @@
     backdrop-filter: blur(16px);
     opacity: 1;
     transform-style: preserve-3d;
-    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 420ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 420ms ease, border-color 420ms ease, background-color 420ms ease;
+    transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 560ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 560ms ease-out, border-color 560ms ease-out, background-color 560ms ease-out;
   }
 
   .value-card::after {
@@ -196,18 +196,18 @@
 
   .value-card:nth-child(1) {
     z-index: 1;
-    transform: translate3d(1.5rem, 0.7rem, 0) rotateY(7deg) rotateZ(-2deg);
+    transform: translate3d(1.5rem, 0.7rem, 0) rotateY(3deg) rotateZ(-1deg);
   }
 
   .value-card:nth-child(2) {
     z-index: 3;
     margin: -1rem;
-    transform: translate3d(0, -1.3rem, 2rem) rotateX(2deg) rotateZ(1deg);
+    transform: translate3d(0, -1.3rem, 0.75rem) rotateX(1deg) rotateZ(0.5deg);
   }
 
   .value-card:nth-child(3) {
     z-index: 2;
-    transform: translate3d(-1.5rem, 0.9rem, 0) rotateY(-7deg) rotateZ(2deg);
+    transform: translate3d(-1.5rem, 0.9rem, 0) rotateY(-3deg) rotateZ(1deg);
   }
 
   .value-card.is-visible {
@@ -229,7 +229,7 @@
     border-color: rgba(252, 218, 182, 0.95);
     background: rgba(255, 255, 255, 0.74);
     box-shadow: 0 30px 58px rgba(75, 43, 18, 0.2), 0 0 0 5px rgba(252, 218, 182, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.95);
-    transform: translate3d(0, -1.15rem, 3.5rem) rotateX(0) rotateY(0) rotateZ(0) scale(1.025);
+    transform: translate3d(0, -1.15rem, 1rem) rotateX(0) rotateY(0) rotateZ(0) scale(1.015);
   }
 
   .value-card.is-visible:hover,
@@ -247,13 +247,6 @@
   .value-card h2 {
     position: relative;
     z-index: 1;
-    transition: transform 350ms ease;
-  }
-
-  .value-card:hover h2,
-  .value-card:focus-within h2,
-  .value-card.is-active h2 {
-    transform: scale(1.035);
   }
 
   .value-icon-badge {
@@ -269,27 +262,20 @@
     background: linear-gradient(135deg, #fcdab6, #ddc1ae 52%, #735a3e);
     box-shadow: 0 12px 24px rgba(75, 43, 18, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.65);
     transform: translateZ(1.5rem) rotate(-6deg);
-    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+    transition: transform 560ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 560ms ease-out;
   }
 
   .value-icon-badge img {
     position: relative;
     z-index: 1;
     filter: brightness(0) saturate(100%) invert(12%) sepia(15%) saturate(2500%) hue-rotate(343deg) brightness(84%) contrast(98%);
-    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .value-card:hover .value-icon-badge,
   .value-card:focus-within .value-icon-badge,
   .value-card.is-active .value-icon-badge {
     box-shadow: 0 18px 30px rgba(75, 43, 18, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.76);
-    transform: translate3d(-0.3rem, -0.45rem, 3rem) rotate(4deg);
-  }
-
-  .value-card:hover .value-icon-badge img,
-  .value-card:focus-within .value-icon-badge img,
-  .value-card.is-active .value-icon-badge img {
-    transform: translate3d(0.2rem, -0.2rem, 1rem) rotate(-10deg) scale(1.12);
+    transform: translate3d(0, -0.35rem, 1.5rem) rotate(-6deg);
   }
 
   @media (max-width: 767px) {

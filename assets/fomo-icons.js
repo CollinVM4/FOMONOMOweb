@@ -58,6 +58,7 @@
     yourPostHistory: 'fomoNomoIcons/yourPostHistory.svg',
     speaker: 'fomoNomoIcons/speaker.svg',
     star: 'fomoNomoIcons/star.svg',
+    filledStar: 'fomoNomoIcons/filledStar.svg',
   };
 
   // Add convenience aliases like coffeeIcon for icons whose source key is coffee.
