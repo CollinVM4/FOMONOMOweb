@@ -100,14 +100,27 @@
     </div>
 
     <!-- 3D Interactive App Mockup -->
-    <div class="mt-8 w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md cursor-pointer">
-      <img 
-        src="assets/image1.png" 
-        alt="FOMO NOMO App Preview" 
-        class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-all duration-700 ease-out 
-               [transform:perspective(1200px)_rotateX(5deg)_rotateY(-6deg)_rotateZ(1deg)] 
-               hover:[transform:perspective(1200px)_rotateX(0deg)_rotateY(0deg)_rotateZ(0deg)_scale(1.02)]"
-      >
+    <div class="mt-8 w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md" id="app-carousel" role="region" aria-label="FOMO NOMO app previews" aria-roledescription="carousel">
+      <div class="relative">
+        <img
+          src="assets/image1.png"
+          alt="FOMO NOMO App Preview 1 of 4"
+          class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-all duration-700 ease-out [transform:perspective(1200px)_rotateX(5deg)_rotateY(-6deg)_rotateZ(1deg)] hover:[transform:perspective(1200px)_rotateX(0deg)_rotateY(0deg)_rotateZ(1deg)_scale(1.02)]"
+          id="app-carousel-image"
+        >
+        <button aria-label="Previous app preview" class="absolute left-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#d2c4bb]/80 bg-[#fcf9f6]/90 text-[#4e453e] shadow-md transition-colors hover:bg-white" id="carousel-previous" type="button">
+          <span aria-hidden="true" class="material-symbols-outlined text-[20px]">chevron_left</span>
+        </button>
+        <button aria-label="Next app preview" class="absolute right-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#d2c4bb]/80 bg-[#fcf9f6]/90 text-[#4e453e] shadow-md transition-colors hover:bg-white" id="carousel-next" type="button">
+          <span aria-hidden="true" class="material-symbols-outlined text-[20px]">chevron_right</span>
+        </button>
+      </div>
+      <div class="mt-4 flex justify-center gap-2" id="carousel-dots" role="tablist" aria-label="Choose an app preview">
+        <button aria-label="Show app preview 1" aria-selected="true" class="h-2.5 w-2.5 rounded-full bg-[#735a3e] transition-all" role="tab" type="button"></button>
+        <button aria-label="Show app preview 2" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all" role="tab" type="button"></button>
+        <button aria-label="Show app preview 3" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all" role="tab" type="button"></button>
+        <button aria-label="Show app preview 4" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all" role="tab" type="button"></button>
+      </div>
     </div>
   </section>
 
@@ -318,6 +331,40 @@
       renderFeatureIcon('feature-icon-speaker', FomoNomoIcons.speakerIcon, 'Speaker icon');
       renderFeatureIcon('feature-icon-going', FomoNomoIcons.goingIcon, 'Going icon');
       renderFeatureIcon('feature-icon-star', FomoNomoIcons.starIcon, 'Star icon');
+    }
+
+    const carouselImage = document.getElementById('app-carousel-image');
+    const previousButton = document.getElementById('carousel-previous');
+    const nextButton = document.getElementById('carousel-next');
+    const carouselDots = document.querySelectorAll('#carousel-dots [role="tab"]');
+    const carouselImages = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
+    let carouselIndex = 0;
+
+    const showCarouselImage = function (index) {
+      carouselIndex = (index + carouselImages.length) % carouselImages.length;
+      carouselImage.src = 'assets/' + carouselImages[carouselIndex];
+      carouselImage.alt = 'FOMO NOMO App Preview ' + (carouselIndex + 1) + ' of ' + carouselImages.length;
+
+      carouselDots.forEach(function (dot, dotIndex) {
+        const isActive = dotIndex === carouselIndex;
+        dot.setAttribute('aria-selected', String(isActive));
+        dot.classList.toggle('bg-[#735a3e]', isActive);
+        dot.classList.toggle('bg-[#d2c4bb]', !isActive);
+      });
+    };
+
+    if (carouselImage && previousButton && nextButton && carouselDots.length) {
+      previousButton.addEventListener('click', function () {
+        showCarouselImage(carouselIndex - 1);
+      });
+      nextButton.addEventListener('click', function () {
+        showCarouselImage(carouselIndex + 1);
+      });
+      carouselDots.forEach(function (dot, dotIndex) {
+        dot.addEventListener('click', function () {
+          showCarouselImage(dotIndex);
+        });
+      });
     }
   })();
 </script>
