@@ -297,27 +297,56 @@
       </a>
     </div>
 
-    <!-- 3D Interactive App Mockup -->
-    <div class="mt-8 w-full max-w-[16rem] sm:max-w-xs md:max-w-sm lg:max-w-md" id="app-carousel" role="region" aria-label="FOMO NOMO app previews" aria-roledescription="carousel">
-      <div class="relative">
-        <img
-          src="assets/image1.png"
-          alt="FOMO NOMO App Preview 1 of 4"
-          class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-all duration-700 ease-out [transform:perspective(1200px)_rotateX(5deg)_rotateY(-6deg)_rotateZ(1deg)] hover:[transform:perspective(1200px)_rotateX(0deg)_rotateY(0deg)_rotateZ(1deg)_scale(1.02)]"
-          id="app-carousel-image"
-        >
-        <button aria-label="Previous app preview" class="absolute left-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#d2c4bb]/80 bg-[#fcf9f6]/90 text-[#4e453e] shadow-md transition-colors hover:bg-white" id="carousel-previous" type="button">
-          <span aria-hidden="true" class="material-symbols-outlined text-[20px]">chevron_left</span>
-        </button>
-        <button aria-label="Next app preview" class="absolute right-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#d2c4bb]/80 bg-[#fcf9f6]/90 text-[#4e453e] shadow-md transition-colors hover:bg-white" id="carousel-next" type="button">
-          <span aria-hidden="true" class="material-symbols-outlined text-[20px]">chevron_right</span>
-        </button>
+    <div class="mt-8 w-full max-w-7xl px-4">
+      <!-- Mobile carousel -->
+      <div class="lg:hidden w-full max-w-full py-4 relative" id="app-carousel" role="region" aria-label="FOMO NOMO app previews">
+        <!-- CSS Scroll Snap Container -->
+        <!-- The padding (px-[15%]) ensures the center image is focused, while revealing the edges of the next/prev images -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-5 px-[15%] pb-16 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" id="app-carousel-scroller">
+          
+          <!-- Slide 1 -->
+          <div class="snap-center shrink-0 w-full relative transition-transform duration-300" id="app-carousel-slide-1">
+            <img src="assets/image1.png" alt="FOMO NOMO Preview 1" 
+                class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-2xl">
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="snap-center shrink-0 w-full relative transition-transform duration-300" id="app-carousel-slide-2">
+            <img src="assets/image2.png" alt="FOMO NOMO Preview 2" 
+                class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-2xl">
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="snap-center shrink-0 w-full relative transition-transform duration-300" id="app-carousel-slide-3">
+            <img src="assets/image3.png" alt="FOMO NOMO Preview 3" 
+                class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-2xl">
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="snap-center shrink-0 w-full relative transition-transform duration-300" id="app-carousel-slide-4">
+            <img src="assets/image4.png" alt="FOMO NOMO Preview 4" 
+                class="w-full h-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-2xl">
+          </div>
+          
+        </div>
+
+        <!-- Dynamic Pill Indicators -->
+        <div class="flex justify-center items-center gap-2" id="carousel-dots" role="tablist">
+          <!-- Active dot is a wider "pill" -->
+          <button aria-controls="app-carousel-slide-1" aria-label="Show app preview 1" aria-selected="true" class="h-2.5 w-8 rounded-full bg-[#735a3e] transition-all duration-300" role="tab" type="button"></button>
+          <!-- Inactive dots are standard circles -->
+          <button aria-controls="app-carousel-slide-2" aria-label="Show app preview 2" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all duration-300" role="tab" type="button"></button>
+          <button aria-controls="app-carousel-slide-3" aria-label="Show app preview 3" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all duration-300" role="tab" type="button"></button>
+          <button aria-controls="app-carousel-slide-4" aria-label="Show app preview 4" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all duration-300" role="tab" type="button"></button>
+        </div>
       </div>
-      <div class="mt-4 flex justify-center gap-2" id="carousel-dots" role="tablist" aria-label="Choose an app preview">
-        <button aria-label="Show app preview 1" aria-selected="true" class="h-2.5 w-2.5 rounded-full bg-[#735a3e] transition-all" role="tab" type="button"></button>
-        <button aria-label="Show app preview 2" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all" role="tab" type="button"></button>
-        <button aria-label="Show app preview 3" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all" role="tab" type="button"></button>
-        <button aria-label="Show app preview 4" aria-selected="false" class="h-2.5 w-2.5 rounded-full bg-[#d2c4bb] transition-all" role="tab" type="button"></button>
+
+      <!-- Desktop phone spread -->
+      <div class="hidden items-center justify-center gap-4 [perspective:1200px] lg:flex xl:gap-6">
+        <img src="assets/image1.png" alt="FOMO NOMO Preview 1" class="h-[390px] w-auto translate-y-8 rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-transform duration-500 ease-out [transform:rotateY(-12deg)_rotateZ(2deg)] hover:z-20 hover:-translate-y-2 hover:scale-105 hover:[transform:rotateY(0deg)_rotateZ(0deg)] xl:h-[500px]">
+        <img src="assets/image2.png" alt="FOMO NOMO Preview 2" class="z-10 h-[440px] w-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-transform duration-500 ease-out [transform:rotateY(-4deg)] hover:z-20 hover:-translate-y-4 hover:scale-105 hover:[transform:rotateY(0deg)] xl:h-[550px]">
+        <img src="assets/image3.png" alt="FOMO NOMO Preview 3" class="z-10 h-[440px] w-auto rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-transform duration-500 ease-out [transform:rotateY(4deg)] hover:z-20 hover:-translate-y-4 hover:scale-105 hover:[transform:rotateY(0deg)] xl:h-[550px]">
+        <img src="assets/image4.png" alt="FOMO NOMO Preview 4" class="h-[390px] w-auto translate-y-8 rounded-[2.5rem] border-4 border-[#fcf9f6] shadow-[0_20px_50px_rgba(28,15,4,0.15)] transition-transform duration-500 ease-out [transform:rotateY(12deg)_rotateZ(-2deg)] hover:z-20 hover:-translate-y-2 hover:scale-105 hover:[transform:rotateY(0deg)_rotateZ(0deg)] xl:h-[500px]">
       </div>
     </div>
   </section>
@@ -535,38 +564,48 @@
       renderFeatureIcon('feature-icon-star', FomoNomoIcons.starIcon, 'Star icon');
     }
 
-    const carouselImage = document.getElementById('app-carousel-image');
-    const previousButton = document.getElementById('carousel-previous');
-    const nextButton = document.getElementById('carousel-next');
+    const carouselScroller = document.getElementById('app-carousel-scroller');
+    const carouselSlides = carouselScroller ? carouselScroller.querySelectorAll('[id^="app-carousel-slide-"]') : [];
     const carouselDots = document.querySelectorAll('#carousel-dots [role="tab"]');
-    const carouselImages = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
-    let carouselIndex = 0;
 
-    const showCarouselImage = function (index) {
-      carouselIndex = (index + carouselImages.length) % carouselImages.length;
-      carouselImage.src = 'assets/' + carouselImages[carouselIndex];
-      carouselImage.alt = 'FOMO NOMO App Preview ' + (carouselIndex + 1) + ' of ' + carouselImages.length;
-
+    const setActiveCarouselDot = function (activeIndex) {
       carouselDots.forEach(function (dot, dotIndex) {
-        const isActive = dotIndex === carouselIndex;
+        const isActive = dotIndex === activeIndex;
         dot.setAttribute('aria-selected', String(isActive));
         dot.classList.toggle('bg-[#735a3e]', isActive);
         dot.classList.toggle('bg-[#d2c4bb]', !isActive);
+        dot.classList.toggle('w-8', isActive);
+        dot.classList.toggle('w-2.5', !isActive);
       });
     };
 
-    if (carouselImage && previousButton && nextButton && carouselDots.length) {
-      previousButton.addEventListener('click', function () {
-        showCarouselImage(carouselIndex - 1);
-      });
-      nextButton.addEventListener('click', function () {
-        showCarouselImage(carouselIndex + 1);
-      });
+    if (carouselScroller && carouselSlides.length && carouselDots.length) {
+      const updateActiveCarouselDot = function () {
+        const carouselCenter = carouselScroller.scrollLeft + carouselScroller.clientWidth / 2;
+        let activeIndex = 0;
+        let closestDistance = Infinity;
+
+        carouselSlides.forEach(function (slide, slideIndex) {
+          const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+          const distance = Math.abs(carouselCenter - slideCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            activeIndex = slideIndex;
+          }
+        });
+
+        setActiveCarouselDot(activeIndex);
+      };
+
+      carouselScroller.addEventListener('scroll', updateActiveCarouselDot, { passive: true });
+      window.addEventListener('resize', updateActiveCarouselDot);
       carouselDots.forEach(function (dot, dotIndex) {
         dot.addEventListener('click', function () {
-          showCarouselImage(dotIndex);
+          carouselSlides[dotIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         });
       });
+      updateActiveCarouselDot();
     }
   })();
 </script>
