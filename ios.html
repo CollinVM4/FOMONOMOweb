@@ -82,15 +82,47 @@
 <main class="flex-1" id="main-content" tabindex="-1">
 	<section class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-14 md:px-8 md:py-20 lg:flex-row lg:items-center lg:justify-between">
 		<div class="max-w-2xl space-y-6">
-			<h1 class="text-4xl font-bold tracking-tight text-[#15355c] md:text-6xl">iPhone landing page for FOMO NOMO.</h1>
+			<h1 class="text-4xl font-bold tracking-tight text-[#15355c] md:text-6xl">
+				iOS landing page.
+			</h1>
 			<p class="max-w-xl text-base leading-7 text-[#35506f] md:text-lg">
-				COMING SOON. IM ABOUT TO SUBMIT FOR APP STORE REVIEW!
+				I'm currently pending App Store Review! <br>Drop your email below to get an exclusive invite the second we go live on campus.
 			</p>
-			<div class="flex flex-col gap-4 sm:flex-row">
-				<a class="inline-flex h-14 items-center justify-center rounded-xl bg-[#15355c] px-7 text-[16px] font-semibold text-white shadow-[0_12px_30px_rgba(16,35,61,0.12)] transition-transform hover:-translate-y-0.5" href="#">Download on the App Store</a>
-				<a class="inline-flex h-14 items-center justify-center rounded-xl border border-[#bfd2eb] bg-white px-7 text-[16px] font-semibold text-[#15355c] transition-transform hover:-translate-y-0.5" href="index.html">Back to Home</a>
+
+			<!-- Email Capture Form -->
+			<form action="#" method="POST" class="mt-8">
+				<div class="flex flex-col gap-3 sm:flex-row sm:max-w-md">
+				<label for="email-address" class="sr-only">Email address</label>
+				<input 
+					id="email-address" 
+					name="email" 
+					type="email" 
+					autocomplete="email" 
+					required 
+					class="min-w-0 flex-auto rounded-xl border border-[#bfd2eb] bg-white px-5 py-3.5 text-base text-[#15355c] placeholder-[#8da8c7] shadow-sm focus:border-[#15355c] focus:outline-none focus:ring-1 focus:ring-[#15355c]" 
+					placeholder="Enter your college email"
+				>
+				<button 
+					type="submit" 
+					class="inline-flex h-14 items-center justify-center rounded-xl bg-[#15355c] px-7 text-[16px] font-semibold text-white shadow-[0_12px_30px_rgba(16,35,61,0.12)] transition-all hover:-translate-y-0.5 hover:bg-[#1a4273]"
+				>
+					Notify Me
+				</button>
+				</div>
+				
+				<!-- Micro-copy to build trust and hype -->
+				<p class="mt-3 text-sm text-[#35506f]/80">
+				Join the waitlist to get early access.<br> no spam :D
+				</p>
+			</form>
+
+			<!-- Secondary Actions -->
+			<div class="pt-4">
+				<a class="inline-flex items-center text-sm font-semibold text-[#15355c] transition-colors hover:text-[#35506f]" href="index.html">
+				<span aria-hidden="true" class="mr-2">&larr;</span> Back to Home
+				</a>
 			</div>
-		</div>
+			</div>
 </main>
 
 <footer class="border-t border-[#d2c4bb]/60 bg-[#f0edea]">
