@@ -28,6 +28,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="assets/theme.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
     .skip-link {
@@ -53,95 +54,141 @@
         box-shadow: 0 0 0 2px #ffffff;
         border-radius: 0.5rem;
     }
+
+    .terms-card {
+        background: var(--fomo-surface-container-low);
+        border: 1px solid color-mix(in srgb, var(--fomo-outline-variant) 75%, white);
+        box-shadow: 0 10px 24px rgba(28, 15, 4, 0.05);
+    }
+
+    .terms-card h2 {
+        color: var(--fomo-primary);
+        letter-spacing: -0.01em;
+    }
+
+    .terms-card p,
+    .terms-card li,
+    .terms-card strong {
+        color: var(--fomo-on-surface-variant);
+    }
+
+    .terms-risk {
+        border-left: 4px solid var(--fomo-secondary);
+        background: color-mix(in srgb, var(--fomo-secondary-container) 45%, white);
+        padding: 1rem 1rem 1rem 1.1rem;
+        border-radius: 0.9rem;
+    }
+
+    .terms-jump-link {
+        background: var(--fomo-surface-container-low);
+        border: 1px solid var(--fomo-outline-variant);
+        color: var(--fomo-on-surface-variant);
+    }
+
+    .terms-jump-link:hover {
+        background: var(--fomo-surface-container);
+        color: var(--fomo-primary);
+    }
 </style>
 </head>
-<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f7f8fb] text-[#15171d] antialiased">
+<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[var(--fomo-background)] text-[var(--fomo-on-surface)] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="sticky top-0 z-50 border-b border-[#d7deea]/70 bg-[#f7f8fb]/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-[var(--fomo-outline-variant)]/70 bg-[var(--fomo-background)]/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
     <a class="flex items-center" href="index.html" aria-label="FOMO NOMO home">
       <img src="assets/landscape_logo.png" alt="FOMO NOMO" class="h-8 w-auto sm:h-10">
     </a>        <div class="relative">
-            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#d7deea]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#5f6d84] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface-container-low)]/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--fomo-on-surface-variant)] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-[var(--fomo-surface-container-low)]" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
                 <span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
             </button>
-            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#d7deea]/80 bg-[#f7f8fb] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="index.html">Home</a>
+            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface)] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="index.html">Home</a>
                 <!-- <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="partner.html">For Businesses</a> -->
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="collab.html">For Students</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="support.html">Contact Support</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#eef2f8] hover:text-[#232a3a]" href="trust-safety.html">Trust &amp; Safety</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#5f6d84] transition-colors hover:bg-[#f0edea] hover:text-[#232a3a]" href="about.html">Meet the Developer</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="collab.html">For Students</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="support.html">Contact Support</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="trust-safety.html">Trust &amp; Safety</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="about.html">Meet the Developer</a>
             </nav>
         </div>
     </div>
 </header>
 
 <main class="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16" id="main-content" tabindex="-1">
-    <section class="overflow-hidden rounded-[28px] border border-[#d7deea]/70 bg-white shadow-[0_20px_50px_rgba(21,23,29,0.06)]">
-        <div class="border-b border-[#d7deea]/60 bg-gradient-to-br from-[#eaf0f8] via-[#f7f9fc] to-white px-6 py-8 md:px-10 md:py-12">
-            <p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[#5f6d84]" style="font-family: 'JetBrains Mono', monospace;">Effective Date: July 30, 2026</p>
-            <h1 class="text-3xl font-bold tracking-tight text-[#232a3a] md:text-5xl">Terms of Service & EULA</h1>
-            <p class="mt-4 max-w-3xl text-base leading-7 text-[#4b5568] md:text-lg">Please read these Terms of Service carefully before accessing or using FOMO NOMO. By using the platform, you agree to be bound by all terms, conditions, and waivers set forth below.</p>
+    <section class="overflow-hidden rounded-[28px] border border-[var(--fomo-outline-variant)]/70 bg-[var(--fomo-surface)] shadow-[0_20px_50px_rgba(21,23,29,0.06)]">
+        <div class="border-b border-[var(--fomo-outline-variant)]/70 bg-gradient-to-br from-[var(--fomo-surface-container)] via-[var(--fomo-surface-container-low)] to-[var(--fomo-surface)] px-6 py-8 md:px-10 md:py-12">
+            <p class="mb-3 text-[11px] uppercase tracking-[0.24em] text-[var(--fomo-on-surface-variant)]" style="font-family: 'JetBrains Mono', monospace;">Effective Date: August 21, 2026</p>
+            <h1 class="text-3xl font-bold tracking-tight text-[var(--fomo-primary)] md:text-5xl">Terms of Service & EULA</h1>
+            <p class="mt-4 max-w-3xl text-base leading-8 text-[var(--fomo-on-surface-variant)] md:text-lg">Please read these Terms of Service carefully before accessing or using FOMO NOMO. By using the platform, you agree to be bound by all terms, conditions, and waivers set forth below.</p>
+            <nav aria-label="Terms section quick links" class="mt-6 flex flex-wrap gap-2">
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-1">1</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-2">2</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-3">3</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-4">4</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-5">5</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-6">6</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-7">7</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-8">8</a>
+                <a class="terms-jump-link rounded-full px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em]" href="#section-9">9</a>
+            </nav>
         </div>
 
         <div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">1. Acceptance of Terms &amp; Eligibility</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">By downloading, registering for, accessing, or using the mobile application or website provided by FOMO NOMO LLC ("FOMO NOMO," "we," "us," or "our"), you enter into a legally binding agreement to comply with and be bound by these Terms of Service. You represent and warrant that you are at least 13 years of age (or the legal minimum age in your jurisdiction) and possess the legal authority to enter into these Terms.</p>
+            <article class="terms-card rounded-[22px] p-6 md:col-span-2" id="section-1">
+                <h2 class="text-[22px] font-semibold">1. Acceptance of Terms &amp; Eligibility</h2>
+                <p class="mt-3 text-[15px] leading-8">By downloading, registering for, accessing, or using the mobile application or website provided by FOMO NOMO LLC ("FOMO NOMO," "we," "us," or "our"), you enter into a legally binding agreement to comply with and be bound by these Terms of Service. You represent and warrant that you are at least 17 years of age (or the legal minimum age in your jurisdiction) and possess the legal authority to enter into these Terms.</p>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">2. Service Description &amp; Modifications</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">FOMO NOMO provides an interactive platform enabling users to discover, publish, share, and interact with localized event information and user-generated content. We reserve the right to modify, suspend, restrict, or discontinue any portion of the service at any time, with or without notice, and without liability to you.</p>
+            <article class="terms-card rounded-[22px] p-6" id="section-2">
+                <h2 class="text-[22px] font-semibold">2. Service Description &amp; Modifications</h2>
+                <p class="mt-3 text-[15px] leading-8">FOMO NOMO provides an interactive platform enabling users to discover, publish, share, and interact with localized event information and user-generated content. We reserve the right to modify, suspend, restrict, or discontinue any portion of the service at any time, with or without notice, and without liability to you.</p>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">3. Account Registration &amp; Security</h2>
-                <ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#4b5568]">
+            <article class="terms-card rounded-[22px] p-6" id="section-3">
+                <h2 class="text-[22px] font-semibold">3. Account Registration &amp; Security</h2>
+                <ul class="mt-3 space-y-3 text-[15px] leading-8">
                     <li><strong>Account Security:</strong> You are strictly responsible for maintaining the confidentiality of your login credentials and for all activities conducted through your account.</li>
                     <li><strong>Accurate Information:</strong> You agree to provide accurate, current, and complete information during registration and to keep your profile updated.</li>
                     <li><strong>Account Termination:</strong> We reserve the absolute right to suspend, disable, or delete your account immediately for any reason, including violations of these Terms.</li>
                 </ul>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">4. User Content License &amp; Prohibited Conduct</h2>
-                <div class="mt-3 grid gap-4 md:grid-cols-2 text-[15px] leading-7 text-[#4b5568]">
+            <article class="terms-card rounded-[22px] p-6 md:col-span-2" id="section-4">
+                <h2 class="text-[22px] font-semibold">4. User Content License &amp; Prohibited Conduct</h2>
+                <div class="mt-3 grid gap-4 text-[15px] leading-8 md:grid-cols-2">
                     <div>
-                        <p class="font-semibold text-[#232a3a]">Content Rights &amp; License Grant</p>
+                        <p class="font-semibold text-[var(--fomo-primary)]">Content Rights &amp; License Grant</p>
                         <p class="mt-1">You retain ownership of the content you submit. However, by posting content to FOMO NOMO, you grant us a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, use, display, reproduce, modify, and distribute your content across the platform.</p>
                     </div>
                     <div>
-                        <p class="font-semibold text-[#232a3a]">Strictly Prohibited Actions</p>
+                        <p class="font-semibold text-[var(--fomo-primary)]">Strictly Prohibited Actions</p>
                         <p class="mt-1">You may not post illegal, harassing, defamatory, sexually explicit, or fraudulent content. You are strictly forbidden from scraping data, reverse-engineering the application, using automated bots, impersonating others, or spamming the community.</p>
                     </div>
                 </div>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">5. Real-World Interactions &amp; Express Assumption of Risk</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">FOMO NOMO functions solely as a passive digital bulletin board for discovering events and social gatherings. We do not host, organize, manage, vet, verify, or background-check any event, host, or attendee. <strong>YOU EXPRESSLY ASSUME ALL RISKS</strong> associated with attending in-person events, meeting third parties, or participating in activities discovered through the platform. You agree that FOMO NOMO LLC shall not be liable for any personal injury, death, property damage, harassment, emotional distress, or loss resulting from your real-world interactions.</p>
+            <article class="terms-card rounded-[22px] p-6 md:col-span-2" id="section-5">
+                <h2 class="text-[22px] font-semibold">5. Real-World Interactions &amp; Express Assumption of Risk</h2>
+                <p class="terms-risk mt-3 text-[15px] leading-8">FOMO NOMO functions solely as a passive digital bulletin board for discovering events and social gatherings. We do not host, organize, manage, vet, verify, or background-check any event, host, or attendee. <strong>YOU EXPRESSLY ASSUME ALL RISKS</strong> associated with attending in-person events, meeting third parties, or participating in activities discovered through the platform. You agree that FOMO NOMO LLC shall not be liable for any personal injury, death, property damage, harassment, emotional distress, or loss resulting from your real-world interactions.</p>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">6. Warranties &amp; Limitation of Liability</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, FOMO NOMO LLC DISCLAIMS ALL WARRANTIES AND SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, DATA, OR GOODWILL. IN NO EVENT SHALL OUR TOTAL AGGREGATE LIABILITY EXCEED $100 USD.</p>
+            <article class="terms-card rounded-[22px] p-6" id="section-6">
+                <h2 class="text-[22px] font-semibold">6. Warranties &amp; Limitation of Liability</h2>
+                <p class="mt-3 text-[15px] leading-8">THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, FOMO NOMO LLC DISCLAIMS ALL WARRANTIES AND SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, DATA, OR GOODWILL. IN NO EVENT SHALL OUR TOTAL AGGREGATE LIABILITY EXCEED $100 USD.</p>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">7. Indemnification</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">You agree to defend, indemnify, and hold harmless FOMO NOMO LLC, its officers, directors, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including legal fees) arising out of or related to your use of the app, your content, your violation of these Terms, or your attendance at any offline event.</p>
+            <article class="terms-card rounded-[22px] p-6" id="section-7">
+                <h2 class="text-[22px] font-semibold">7. Indemnification</h2>
+                <p class="mt-3 text-[15px] leading-8">You agree to defend, indemnify, and hold harmless FOMO NOMO LLC, its officers, directors, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including legal fees) arising out of or related to your use of the app, your content, your violation of these Terms, or your attendance at any offline event.</p>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#f7f8fb] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#232a3a]">8. Governing Law, Arbitration &amp; Class Action Waiver</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#4b5568]">These Terms are governed by and construed in accordance with the laws of the State of Florida, without regard to conflict of law principles. You agree to submit to the exclusive personal jurisdiction of courts located in Florida. <strong>YOU AND FOMO NOMO AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</strong></p>
+            <article class="terms-card rounded-[22px] p-6 md:col-span-2" id="section-8">
+                <h2 class="text-[22px] font-semibold">8. Governing Law, Arbitration &amp; Class Action Waiver</h2>
+                <p class="mt-3 text-[15px] leading-8">These Terms are governed by and construed in accordance with the laws of the State of Florida, without regard to conflict of law principles. You agree to submit to the exclusive personal jurisdiction of courts located in Florida. <strong>YOU AND FOMO NOMO AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</strong></p>
             </article>
 
-            <article class="rounded-[22px] border border-[#d7deea] bg-[#232a3a] p-6 text-white md:col-span-2">
+            <article class="rounded-[22px] border border-[var(--fomo-primary-container)] bg-[var(--fomo-primary)] p-6 text-[var(--fomo-on-primary)] md:col-span-2" id="section-9">
                 <h2 class="text-[22px] font-semibold">9. Changes to Terms, Severability &amp; Contact Information</h2>
-                <p class="mt-3 text-[15px] leading-7 text-white/85">We reserve the right to revise these Terms at any time. Continued access or use of FOMO NOMO following any updates constitutes acceptance of the modified Terms. If any provision is deemed unenforceable, the remaining provisions will remain in full force and effect. For questions, contact FOMO NOMO LLC at <a class="underline hover:text-white" href="mailto:support@fomonomoapp.com">support@fomonomoapp.com</a>.</p>
+                <p class="mt-3 text-[15px] leading-8 text-[var(--fomo-primary-fixed)]">We reserve the right to revise these Terms at any time. Continued access or use of FOMO NOMO following any updates constitutes acceptance of the modified Terms. If any provision is deemed unenforceable, the remaining provisions will remain in full force and effect. For questions, contact FOMO NOMO LLC at <a class="underline hover:text-[var(--fomo-on-primary)]" href="mailto:support@fomonomoapp.com">support@fomonomoapp.com</a>.</p>
             </article>
         </div>
     </section>

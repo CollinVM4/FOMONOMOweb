@@ -28,6 +28,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="assets/theme.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
 	.skip-link {
@@ -55,24 +56,24 @@
 	}
 </style>
 </head>
-<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#fffaf3] text-[#2b2014] antialiased">
+<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[var(--fomo-background)] text-[var(--fomo-on-surface)] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="sticky top-0 z-50 border-b border-[#ecd8b7]/70 bg-[#fffaf3]/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-[var(--fomo-outline-variant)]/70 bg-[var(--fomo-background)]/90 backdrop-blur-md">
 	<div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
     <a class="flex items-center" href="index.html" aria-label="FOMO NOMO home">
       <img src="assets/landscape_logo.png" alt="FOMO NOMO" class="h-8 w-auto sm:h-10">
     </a>		<div class="relative">
-			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#ecd8b7]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#8d6a37] shadow-[0_8px_20px_rgba(43,32,20,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface-container-low)]/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--fomo-on-surface-variant)] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-[var(--fomo-surface-container-low)]" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
 				<span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
 				
 			</button>
-			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#ecd8b7]/80 bg-[#fffaf3] p-2 opacity-0 shadow-[0_20px_44px_rgba(43,32,20,0.14)] transition-all duration-200" id="site-menu">
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#8d6a37] transition-colors hover:bg-[#fff5e2] hover:text-[#5b3d18]" href="index.html">Home</a>
+			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface)] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="index.html">Home</a>
 				<!-- <a class="block rounded-xl px-3 py-3 text-[11px] text-[#8d6a37] transition-colors hover:bg-[#fff5e2] hover:text-[#5b3d18]" href="partner.html">For Businesses</a> -->
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#8d6a37] transition-colors hover:bg-[#fff5e2] hover:text-[#5b3d18]" href="collab.html">For Students</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#8d6a37] transition-colors hover:bg-[#fff5e2] hover:text-[#5b3d18]" href="support.html">Contact Support</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#8d6a37] transition-colors hover:bg-[#fff5e2] hover:text-[#5b3d18]" href="trust-safety.html">Trust &amp; Safety</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#8d6a37] transition-colors hover:bg-[#f0edea] hover:text-[#5b3d18]" href="about.html">Meet the Developer</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="collab.html">For Students</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="support.html">Contact Support</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="trust-safety.html">Trust &amp; Safety</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="about.html">Meet the Developer</a>
 
 			</nav>
 		</div>

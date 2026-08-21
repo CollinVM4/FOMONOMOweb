@@ -28,6 +28,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="assets/theme.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
 	.skip-link {
@@ -55,24 +56,24 @@
 	}
 </style>
 </head>
-<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#fcf9f6] text-[#1b1c1a] antialiased">
+<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[var(--fomo-background)] text-[var(--fomo-on-surface)] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="sticky top-0 z-50 border-b border-[#d2c4bb]/70 bg-[#fcf9f6]/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-[var(--fomo-outline-variant)]/70 bg-[var(--fomo-background)]/90 backdrop-blur-md">
 	<div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
     <a class="flex items-center" href="index.html" aria-label="FOMO NOMO home">
       <img src="assets/landscape_logo.png" alt="FOMO NOMO" class="h-8 w-auto sm:h-10">
     </a>		<div class="relative">
-			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#d2c4bb]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#4e453e] shadow-[0_8px_20px_rgba(28,15,4,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+			<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface-container-low)]/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--fomo-on-surface-variant)] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-[var(--fomo-surface-container-low)]" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
 				<span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
 				
 			</button>
-			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#d2c4bb]/80 bg-[#fcf9f6] p-2 opacity-0 shadow-[0_20px_44px_rgba(28,15,4,0.14)] transition-all duration-200" id="site-menu">
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="index.html">Home</a>
+			<nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface)] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="index.html">Home</a>
 				<!-- <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="partner.html">For Businesses</a> -->
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="collab.html">For Students</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="support.html">Contact Support</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="trust-safety.html">Trust &amp; Safety</a>
-				<a class="block rounded-xl px-3 py-3 text-[11px] text-[#4e453e] transition-colors hover:bg-[#f0edea] hover:text-[#1c0f04]" href="about.html">Meet the Developer</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="collab.html">For Students</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="support.html">Contact Support</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="trust-safety.html">Trust &amp; Safety</a>
+				<a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="about.html">Meet the Developer</a>
 			</nav>
 		</div>
 	</div>
@@ -84,26 +85,42 @@
 			<p class="text-[11px] uppercase tracking-[0.24em] text-[#735a3e]" style="font-family: 'JetBrains Mono', monospace;">Trust &amp; Safety</p>
 			<h1 class="mt-3 text-3xl font-bold tracking-tight text-[#1c0f04] md:text-5xl">Trust &amp; Safety</h1>
 			<p class="mt-4 max-w-3xl text-[15px] leading-7 text-[#4e453e] md:text-base">FOMO NOMO only works if it feels safe to show up. Let's follow these rules to keep it that way:</p>
+			<ul class="mt-3 space-y-2">
+				<li><a class="text-[#735a3e] transition-colors hover:text-[#5b3d18] hover:underline" href="community.html">Community Guidelines</a></li>
+				<li><a class="text-[#735a3e] transition-colors hover:text-[#5b3d18] hover:underline" href="privacy.html">Privacy Policy</a></li>
+				<li><a class="text-[#735a3e] transition-colors hover:text-[#5b3d18] hover:underline" href="terms.html">Terms of Service</a></li>
+			</ul>
 		</div>
 		<div class="grid gap-5 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
 			<article class="rounded-[22px] border border-[#d2c4bb]/70 bg-white/70 p-5">
-				<p class="text-[15px] leading-7 text-[#4e453e]"><strong>Verified campus communities:</strong> Every feed is tied to a verified school email (like @ucf.edu). You'll only ever see your own campus's events and posts. No outside accounts or noise from other campuses.</p>
+				<h3 class="text-[15px] font-semibold text-[#1c0f04] mb-2">Verified campus communities</h3>
+				<p class="text-[15px] leading-7 text-[#4e453e]">Every feed is tied to a verified school email (like @ucf.edu). You'll only ever see your own campus's events and posts. No outside accounts or noise from other campuses.</p>
 			</article>
 			<article class="rounded-[22px] border border-[#d2c4bb]/70 bg-white/70 p-5">
-				<p class="text-[15px] leading-7 text-[#4e453e]"><strong>Report anything, instantly:</strong> All posts, comments, and profiles have a Report option built right in. If something's off, flag it and it will be reviewed.</p>
+				<h3 class="text-[15px] font-semibold text-[#1c0f04] mb-2">Report anything, instantly</h3>
+				<p class="text-[15px] leading-7 text-[#4e453e]">All posts, comments, and profiles have a Report option built right in. If something's off, flag it and it will be reviewed.</p>
 			</article>
 			<article class="rounded-[22px] border border-[#d2c4bb]/70 bg-white/70 p-5">
-			<p class="text-[15px] leading-7 text-[#4e453e]"><strong>Block whoever you want:</strong></p>
-				<ul class="mt-2 space-y-2 text-[15px] leading-7 text-[#4e453e] list-disc list-inside">
-					<li><strong>Quick Blocking:</strong> Tap the 3-dot menu on any post or comment to immediately block a user. They will no longer see your content or be able to comment.</li>
-					<li><strong>Manage Attendees:</strong> Hosting? Open the 'See Attendees' list to manage your guests. You have two options: "Remove" to simply take someone off the list, or "Block" to permanently ensure they can never rejoin your event.</li>				</ul>			
+				<h3 class="text-[15px] font-semibold text-[#1c0f04] mb-3">Block whoever you want</h3>
+				<ul class="space-y-4 text-[15px] leading-7 text-[#4e453e]">
+					<li>
+						<p class="font-semibold text-[#5b3d18] mb-1">Quick Blocking</p>
+						<p>Tap the 3-dot menu on any post or comment to immediately block a user. They will no longer see your content or be able to comment.</p>
+					</li>
+					<li>
+						<p class="font-semibold text-[#5b3d18] mb-1">Manage Attendees</p>
+						<p>Hosting? Open the 'See Attendees' list to manage your guests. You have two options: "Remove" to simply take someone off the list, or "Block" to permanently ensure they can never rejoin your event.</p>
+					</li>
+				</ul>
 		</article>
 			<article class="rounded-[22px] border border-[#d2c4bb]/70 bg-white/70 p-5">
-				<p class="text-[15px] leading-7 text-[#4e453e]"><strong>We actually moderate:</strong> Reports don't go into the void. Content that breaks our <a class="font-semibold text-[#5b3d18] underline underline-offset-2" href="community.html">Community Guidelines</a> gets removed, and repeat or serious violations lead to suspension or a permanent ban.</p>
+				<h3 class="text-[15px] font-semibold text-[#1c0f04] mb-2">We actually moderate</h3>
+				<p class="text-[15px] leading-7 text-[#4e453e]">Reports don't go into the void. Content that breaks our <a class="text-[#735a3e] transition-colors hover:text-[#5b3d18] hover:underline" href="community.html">Community Guidelines</a> gets removed, and repeat or serious violations lead to suspension or a permanent ban.</p>
 			</article>
 			<article class="rounded-[22px] border border-[#d2c4bb]/70 bg-white/70 p-5 md:col-span-2">
-				<p class="text-[15px] leading-7 text-[#4e453e]"><strong>Safety first:</strong> A few basics: meet in public, well-lit places, tell a friend where you're headed, and trust your gut. FOMO NOMO helps you find what's happening - the same common sense you'd use meeting anyone new still applies.</p>
-				<p class="mt-4 text-[15px] italic leading-7 text-[#735a3e]">Something feel wrong? Reach us anytime at <a class="underline decoration-[#735a3e]/60 underline-offset-2 hover:decoration-[#735a3e]" href="mailto:support@fomonomoapp.com?subject=Safety%20Concern">support@fomonomoapp.com</a>.</p>
+				<h3 class="text-[15px] font-semibold text-[#1c0f04] mb-2">Safety first</h3>
+				<p class="text-[15px] leading-7 text-[#4e453e]">A few basics: meet in public, well-lit places, tell a friend where you're headed, and trust your gut. FOMO NOMO helps you find what's happening – the same common sense you'd use meeting anyone new still applies.</p>
+				<p class="mt-4 text-[15px] leading-7 text-[#4e453e]">Something feel wrong? Reach us anytime at <a class="text-[#735a3e] transition-colors hover:text-[#5b3d18] hover:underline" href="mailto:support@fomonomoapp.com?subject=Safety%20Concern">support@fomonomoapp.com</a>.</p>
 			</article>
 		</div>
 	</section>

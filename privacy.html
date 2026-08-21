@@ -28,6 +28,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="assets/theme.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
     .skip-link {
@@ -55,23 +56,23 @@
     }
 </style>
 </head>
-<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f8fbff] text-[#10233d] antialiased">
+<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[var(--fomo-background)] text-[var(--fomo-on-surface)] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="sticky top-0 z-50 border-b border-[#bfd2eb]/70 bg-[#f8fbff]/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-[var(--fomo-outline-variant)]/70 bg-[var(--fomo-background)]/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
     <a class="flex items-center" href="index.html" aria-label="FOMO NOMO home">
       <img src="assets/landscape_logo.png" alt="FOMO NOMO" class="h-8 w-auto sm:h-10">
     </a>        <div class="relative">
-            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#bfd2eb]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#496b92] shadow-[0_8px_20px_rgba(16,35,61,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface-container-low)]/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--fomo-on-surface-variant)] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-[var(--fomo-surface-container-low)]" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
                 <span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
             </button>
-            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#bfd2eb]/80 bg-[#f8fbff] p-2 opacity-0 shadow-[0_20px_44px_rgba(16,35,61,0.14)] transition-all duration-200" id="site-menu">
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#496b92] transition-colors hover:bg-[#eef5fd] hover:text-[#15355c]" href="index.html">Home</a>
+            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface)] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="index.html">Home</a>
                 <!-- <a class="block rounded-xl px-3 py-3 text-[11px] text-[#496b92] transition-colors hover:bg-[#eef5fd] hover:text-[#15355c]" href="partner.html">For Businesses</a> -->
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#496b92] transition-colors hover:bg-[#eef5fd] hover:text-[#15355c]" href="collab.html">For Students</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#496b92] transition-colors hover:bg-[#eef5fd] hover:text-[#15355c]" href="support.html">Contact Support</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#496b92] transition-colors hover:bg-[#eef5fd] hover:text-[#15355c]" href="trust-safety.html">Trust &amp; Safety</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#496b92] transition-colors hover:bg-[#f0edea] hover:text-[#15355c]" href="about.html">Meet the Developer</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="collab.html">For Students</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="support.html">Contact Support</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="trust-safety.html">Trust &amp; Safety</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="about.html">Meet the Developer</a>
 
             </nav>
         </div>
@@ -88,32 +89,62 @@
 
         <div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">1. Introduction</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">FOMO NOMO LLC respects your privacy and is committed to protecting it through this policy. The app is designed to host user-generated content and facilitate public campus events and meetups.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">1</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Introduction</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">FOMO NOMO LLC respects your privacy and is committed to protecting it through this policy. The app is designed to host user-generated content and facilitate public campus events and meetups.</p>
             </article>
 
             <!-- UPDATED: Added Device & Technical Data line -->
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">2. Information We Collect</h2>
-                <ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#35506f]">
-                    <li><strong>Email Address:</strong> Used for account creation, authentication, and verifying your affiliation with a specific school or institution (e.g., a .edu domain) to assign you to the correct campus community feed.</li>
-                    <li><strong>User-Generated Content:</strong> Feed posts, comments, likes, event details, and photos you upload.</li>
-                    <li><strong>Device & Technical Data:</strong> IP address, device model, operating system version, and system diagnostic logs collected automatically for security, fraud prevention, and operational performance.</li>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">2</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Information We Collect</h2>
+                </div>
+                <ul class="space-y-4 text-[15px] leading-7 text-[#35506f]">
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Email Address</p>
+                        <p>Used for account creation, authentication, and verifying your affiliation with a specific school or institution (e.g., a .edu domain) to assign you to the correct campus community feed.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">User-Generated Content</p>
+                        <p>Feed posts, comments, likes, event details, and photos you upload.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Device &amp; Technical Data</p>
+                        <p>IP address, device model, operating system version, and system diagnostic logs collected automatically for security, fraud prevention, and operational performance.</p>
+                    </li>
                 </ul>
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">3. Information We Do NOT Collect</h2>
-                <ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#35506f]">
-                    <li><strong>No Precise Location Tracking:</strong> We do not collect, track, or store precise GPS or live location data from your device.</li>
-                    <li><strong>No Bluetooth Data:</strong> Bluetooth permissions are not requested or used.</li>
-                    <li><strong>No Direct Messaging:</strong> The platform does not support or store 1-on-1 private messaging.</li>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">3</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Information We Do NOT Collect</h2>
+                </div>
+                <ul class="space-y-4 text-[15px] leading-7 text-[#35506f]">
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">No Precise Location Tracking</p>
+                        <p>We do not collect, track, or store precise GPS or live location data from your device.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">No Bluetooth Data</p>
+                        <p>Bluetooth permissions are not requested or used.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">No Direct Messaging</p>
+                        <p>The platform does not support or store 1-on-1 private messaging.</p>
+                    </li>
                 </ul>
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">4. How We Use Your Information</h2>
-                <ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#35506f]">
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">4</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">How We Use Your Information</h2>
+                </div>
+                <ul class="space-y-3 text-[15px] leading-7 text-[#35506f]">
                     <li>Provide and maintain core functionality and app performance.</li>
                     <li>Display your profile, event details, and posts to other verified users within your feed.</li>
                     <li>Manage your account, respond to inquiry tickets, and provide customer support.</li>
@@ -122,56 +153,101 @@
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">5. Content Moderation and Safety</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">We use automated keyword/pattern filtering on posts and comments, combined with user-submitted reports and human review. Reported content is reviewed on an ongoing basis (typically within 24 hours) and, where it violates our <a class="font-semibold text-[#5b3d18] underline underline-offset-2" href="community.html">Community Guidelines</a>, removed. Users may block other users and report individual posts or comments.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">5</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Content Moderation and Safety</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">We use automated keyword/pattern filtering on posts and comments, combined with user-submitted reports and human review. Reported content is reviewed on an ongoing basis (typically within 24 hours) and, where it violates our <a class="text-[#496b92] transition-colors hover:text-[#15355c] hover:underline" href="community.html">Community Guidelines</a>, removed. Users may block other users and report individual posts or comments.</p>
             </article>
 
             <!-- UPDATED: Added Local Business Partnerships clause for promoted posts -->
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">6. Sharing Your Information & Partnerships</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">We do not sell your personal information. We only share information under the following limited circumstances:</p>
-                <ul class="mt-3 list-disc space-y-2 pl-5 text-[15px] leading-7 text-[#35506f]">
-                    <li><strong>Campus Feed Visibility:</strong> Posts, comments, and event details you publish are visible to other verified members of your campus feed.</li>
-                    <li><strong>Service Providers:</strong> Trusted third-party vendors (such as cloud hosting infrastructure and transactional email services) process data on our behalf to operate the platform.</li>
-                    <li><strong>Local Business Partnerships:</strong> We may display sponsored or promoted posts from authorized local business partners. We may share aggregated, non-identifiable metric reports (such as total post impressions or views) with these partners. We never sell or share user email addresses or individual profile data with commercial partners.</li>
-                    <li><strong>Legal Requirements:</strong> When required by law, court order, subpoena, or valid public authority request.</li>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">6</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Sharing Your Information &amp; Partnerships</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">We do not sell your personal information. We only share information under the following limited circumstances:</p>
+                <ul class="mt-4 space-y-3 text-[15px] leading-7 text-[#35506f]">
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Campus Feed Visibility</p>
+                        <p>Posts, comments, and event details you publish are visible to other verified members of your campus feed.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Service Providers</p>
+                        <p>Trusted third-party vendors (such as cloud hosting infrastructure and transactional email services) process data on our behalf to operate the platform.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Local Business Partnerships</p>
+                        <p>We may display sponsored or promoted posts from authorized local business partners. We may share aggregated, non-identifiable metric reports (such as total post impressions or views) with these partners. We never sell or share user email addresses or individual profile data with commercial partners.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Legal Requirements</p>
+                        <p>When required by law, court order, subpoena, or valid public authority request.</p>
+                    </li>
                 </ul>
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">7. Institutional Email Verification</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">Feeds are strictly segmented by verified school email domains. Users without a matching, verified domain cannot access or view that specific campus's feed.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">7</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Institutional Email Verification</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">Feeds are strictly segmented by verified school email domains. Users without a matching, verified domain cannot access or view that specific campus's feed.</p>
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">8. Your Choices</h2>
-                <ul class="mt-3 space-y-3 text-[15px] leading-7 text-[#35506f]">
-                    <li><strong>Camera Access:</strong> Revoke camera roll access at any time through your device system settings.</li>
-                    <li><strong>Account Deletion:</strong> Request full deletion of your account and associated profile data in-app or by contacting support.</li>
-                    <li><strong>Blocking:</strong> You may block other users at any time, which prevents them from viewing your content or interacting with you within the app.</li>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">8</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Your Choices</h2>
+                </div>
+                <ul class="space-y-4 text-[15px] leading-7 text-[#35506f]">
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Camera Access</p>
+                        <p>Revoke camera roll access at any time through your device system settings.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Account Deletion</p>
+                        <p>Request full deletion of your account and associated profile data in-app or by contacting support.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#15355c] mb-1">Blocking</p>
+                        <p>You may block other users at any time, which prevents them from viewing your content or interacting with you within the app.</p>
+                    </li>
                 </ul>
             </article>
 
             <!-- NEW: App Store COPPA requirement -->
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">9. Children's Privacy</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">FOMO NOMO is designed exclusively for college and university student communities. Our platform is not intended for users under 17 years of age, and we do not knowingly collect personal information from individuals under 17.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">9</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Children's Privacy</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">FOMO NOMO is designed exclusively for college and university student communities. Our platform is not intended for users under 17 years of age, and we do not knowingly collect personal information from individuals under 17.</p>
             </article>
 
             <!-- NEW: App Store Data Retention requirement -->
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">10. Data Security & Retention</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">We implement standard technical and organizational safeguards, including encrypted data transmissions (HTTPS/TLS), to protect your information. Upon account deletion, your personal profile data is permanently purged from active databases within 30 days.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">10</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Data Security &amp; Retention</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">We implement standard technical and organizational safeguards, including encrypted data transmissions (HTTPS/TLS), to protect your information. Upon account deletion, your personal profile data is permanently purged from active databases within 30 days.</p>
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#f8fbff] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#15355c]">11. Changes to This Privacy Policy</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#35506f]">We may update this policy from time to time. Changes will be posted here with an updated effective date at the top of the page.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#15355c]">11</span>
+                    <h2 class="text-[22px] font-semibold text-[#15355c]">Changes to This Privacy Policy</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#35506f]">We may update this policy from time to time. Changes will be posted here with an updated effective date at the top of the page.</p>
             </article>
 
             <article class="rounded-[22px] border border-[#bfd2eb] bg-[#15355c] p-6 text-white md:col-span-2">
-                <h2 class="text-[22px] font-semibold">12. Contact Us</h2>
-                <p class="mt-3 text-[15px] leading-7 text-white/85">Questions about this Privacy Policy or our data practices can be sent to FOMO NOMO LLC at <a href="mailto:support@fomonomoapp.com" class="underline decoration-white/60 underline-offset-4 hover:text-white">support@fomonomoapp.com</a>.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-white">12</span>
+                    <h2 class="text-[22px] font-semibold">Contact Us</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-white/85">Questions about this Privacy Policy or our data practices can be sent to FOMO NOMO LLC at <a href="mailto:support@fomonomoapp.com" class="text-white/85 underline underline-offset-2 hover:text-white transition-colors">support@fomonomoapp.com</a>.</p>
             </article>
         </div>
     </section>

@@ -28,6 +28,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="assets/theme.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style>
     .skip-link {
@@ -55,23 +56,23 @@
     }
 </style>
 </head>
-<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[#f5fbf8] text-[#10251b] antialiased">
+<body style="font-family: 'Be Vietnam Pro', sans-serif;" class="min-h-screen bg-[var(--fomo-background)] text-[var(--fomo-on-surface)] antialiased">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="sticky top-0 z-50 border-b border-[#c8e3d6]/70 bg-[#f5fbf8]/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-[var(--fomo-outline-variant)]/70 bg-[var(--fomo-background)]/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
     <a class="flex items-center" href="index.html" aria-label="FOMO NOMO home">
       <img src="assets/landscape_logo.png" alt="FOMO NOMO" class="h-8 w-auto sm:h-10">
     </a>        <div class="relative">
-            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[#c8e3d6]/80 bg-white/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[#4c7666] shadow-[0_8px_20px_rgba(16,37,27,0.08)] transition-colors hover:bg-white" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
+            <button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle site navigation" class="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface-container-low)]/80 px-3 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--fomo-on-surface-variant)] shadow-[0_8px_20px_rgba(21,23,29,0.08)] transition-colors hover:bg-[var(--fomo-surface-container-low)]" id="menu-toggle" style="font-family: 'JetBrains Mono', monospace;" type="button">
                 <span class="material-symbols-outlined text-[18px]" id="menu-icon" style="font-variation-settings: 'FILL' 1;">menu</span>
             </button>
-            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[#c8e3d6]/80 bg-[#f5fbf8] p-2 opacity-0 shadow-[0_20px_44px_rgba(16,37,27,0.14)] transition-all duration-200" id="site-menu">
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="index.html">Home</a>
+            <nav aria-label="Site links" class="invisible pointer-events-none absolute right-0 top-12 w-64 translate-y-2 rounded-2xl border border-[var(--fomo-outline-variant)]/80 bg-[var(--fomo-surface)] p-2 opacity-0 shadow-[0_20px_44px_rgba(21,23,29,0.14)] transition-all duration-200" id="site-menu">
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="index.html">Home</a>
                 <!-- <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="partner.html">For Businesses</a> -->
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="collab.html">For Students</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="support.html">Contact Support</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#174435]" href="trust-safety.html">Trust &amp; Safety</a>
-                <a class="block rounded-xl px-3 py-3 text-[11px] text-[#4c7666] transition-colors hover:bg-[#ebf9f3] hover:text-[#1c0f04]" href="about.html">Meet the Developer</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="collab.html">For Students</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="support.html">Contact Support</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="trust-safety.html">Trust &amp; Safety</a>
+                <a class="block rounded-xl px-3 py-3 text-[11px] text-[var(--fomo-on-surface-variant)] transition-colors hover:bg-[var(--fomo-surface-container)] hover:text-[var(--fomo-primary)]" href="about.html">Meet the Developer</a>
 
             </nav>
         </div>
@@ -89,56 +90,96 @@
         <div class="grid gap-6 px-6 py-8 md:grid-cols-2 md:px-10 md:py-10">
             <!-- 1. Core Purpose -->
             <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#174435]">1. The Core Standard:</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#3f6457]">FOMO NOMO is built exclusively for organizing, sharing, and discovering real-time events on or around campus. Every post must represent an authentic, upcoming gathering, activity, or meetup with clear time and location details.<strong> Posts that do not represent an actual event clutter the feed and will be removed.</strong></p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#174435]">1</span>
+                    <h2 class="text-[22px] font-semibold text-[#174435]">Keep Utility High</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#3f6457]">FOMO NOMO is built exclusively for organizing, sharing, and discovering real-time events on or around campus. Every post must represent an authentic, upcoming gathering, activity, or meetup with clear time and location details.<strong> Posts that do not represent an actual event clutter the feed and will be removed.</strong></p>
             </article>
 
             <!-- 2. Commercial Spam & Academic Scams -->
             <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6">
-                <h2 class="text-[22px] font-semibold text-[#174435]">2. Zero Tolerance for Spam &amp; Scams</h2>
-                <p class="mt-2 text-[14px] leading-6 text-[#3f6457]">To keep FOMO NOMO useful, we strictly prohibit:</p>
-                <ul class="mt-3 space-y-2 text-[14px] leading-6 text-[#3f6457]">
-                    <li><strong>Academic Solicitations:</strong> Homework-for-hire, essay writing services, exam leaks, or "do my homework" offers.</li>
-                    <li><strong>Unapproved Business & Self-Promotion:</strong> Unsolicited promotion of external businesses, paid services, or affiliate links. If you are a local business interested in sponsored posts or official partnerships, please contact us directly.</li>                    <li><strong>Unregulated Sales &amp; Scalping:</strong> Selling tickets, illegal substances, contraband, or unauthorized goods.</li>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#174435]">2</span>
+                    <h2 class="text-[22px] font-semibold text-[#174435]">Spam &amp; Scams</h2>
+                </div>
+                <p class="text-[14px] leading-6 text-[#3f6457]">To keep FOMO NOMO useful, we strictly prohibit:</p>
+                <ul class="mt-4 space-y-4 text-[14px] leading-6 text-[#3f6457]">
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Academic Solicitations</p>
+                        <p>Homework-for-hire, essay writing services, exam leaks, or "do my homework" offers.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Unapproved Business &amp; Self-Promotion</p>
+                        <p>Unsolicited promotion of external businesses, paid services, or affiliate links. If you are a local business interested in sponsored posts or official partnerships, please contact us directly.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Unregulated Sales &amp; Scalping</p>
+                        <p>Selling tickets, illegal substances, contraband, or unauthorized goods.</p>
+                    </li>
                 </ul>
             </article>
 
             <!-- 3. Safety & Harassment -->
             <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6">
-                <h2 class="text-[22px] font-semibold text-[#174435]">3. Safety, Civility &amp; Respect</h2>
-                <p class="mt-2 text-[14px] leading-6 text-[#3f6457]">We strictly enforce a safe, non-threatening environment for all students and campus members:</p>
-                <ul class="mt-3 space-y-2 text-[14px] leading-6 text-[#3f6457]">
-                    <li><strong>Harassment &amp; Bullying:</strong> Targeted abuse, hate speech, body shaming, threats, or call-out posts targeting individuals.</li>
-                    <li><strong>Doxxing &amp; Privacy Violations:</strong> Sharing private phone numbers, addresses, social security info, or private photos without consent.</li>
-                    <li><strong>Sexually Explicit Material:</strong> Nudity, pornography, or sexually suggestive solicitations.</li>
-                    <li><strong>Dangerous Activities:</strong> Organizing activities designed to cause bodily injury, extreme intoxication, or illegal acts.</li>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#174435]">3</span>
+                    <h2 class="text-[22px] font-semibold text-[#174435]">Safety, Civility &amp; Respect</h2>
+                </div>
+                <p class="text-[14px] leading-6 text-[#3f6457]">We strictly enforce a safe, non-threatening environment for all students and campus members:</p>
+                <ul class="mt-4 space-y-4 text-[14px] leading-6 text-[#3f6457]">
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Harassment &amp; Bullying</p>
+                        <p>Targeted abuse, hate speech, body shaming, threats, or call-out posts targeting individuals.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Doxxing &amp; Privacy Violations</p>
+                        <p>Sharing private phone numbers, addresses, social security info, or private photos without consent.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Sexually Explicit Material</p>
+                        <p>Nudity, pornography, or sexually suggestive solicitations.</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-[#174435] mb-1">Dangerous Activities</p>
+                        <p>Organizing activities designed to cause bodily injury, extreme intoxication, or illegal acts.</p>
+                    </li>
                 </ul>
             </article>
 
             <!-- 4. Account Integrity & Verification -->
             <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#174435]">4. Authenticity &amp; Campus Verification Integrity</h2>
-                <div class="mt-3 grid gap-4 md:grid-cols-2 text-[15px] leading-7 text-[#3f6457]">
+                <div class="flex items-baseline gap-3 mb-4">
+                    <span class="text-2xl font-bold text-[#174435]">4</span>
+                    <h2 class="text-[22px] font-semibold text-[#174435]">Authenticity &amp; Campus Verification</h2>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 text-[15px] leading-7 text-[#3f6457]">
                     <div>
-                        <p class="font-semibold text-[#174435]">Impersonation &amp; Deception</p>
-                        <p class="mt-1 text-[14px] leading-6">Creating fake profiles, impersonating other students, faculty, or registered campus organizations is strictly forbidden and results in an immediate permanent ban.</p>
+                        <p class="font-semibold text-[#174435] mb-2">Impersonation &amp; Deception</p>
+                        <p class="text-[14px] leading-6">Creating fake profiles, impersonating other students, faculty, or registered campus organizations is strictly forbidden and results in an immediate permanent ban.</p>
                     </div>
                     <div>
-                        <p class="font-semibold text-[#174435]">Verification Circumvention</p>
-                        <p class="mt-1 text-[14px] leading-6">Selling, sharing, or bypassing campus <code>.edu</code> email verification to give unauthorized non-students access to private campus feeds is strictly prohibited.</p>
+                        <p class="font-semibold text-[#174435] mb-2">Verification Circumvention</p>
+                        <p class="text-[14px] leading-6">Selling, sharing, or bypassing campus <code>.edu</code> email verification to give unauthorized non-students access to private campus feeds is strictly prohibited.</p>
                     </div>
                 </div>
             </article>
 
             <!-- 5. Real-World Host Responsibilities -->
             <article class="rounded-[22px] border border-[#c8e3d6] bg-[#f5fbf8] p-6 md:col-span-2">
-                <h2 class="text-[22px] font-semibold text-[#174435]">5. Event Host &amp; Attendee Responsibilities</h2>
-                <p class="mt-3 text-[15px] leading-7 text-[#3f6457]">When hosting an event through FOMO NOMO, you are responsible for maintaining a safe and respectful space. Event organizers must provide accurate venue details and adhere to local university, municipal, and state laws. Hosts retain full discretion to remove disruptive individuals from attendee lists using built-in host controls.</p>
+                <div class="flex items-baseline gap-3 mb-3">
+                    <span class="text-2xl font-bold text-[#174435]">5</span>
+                    <h2 class="text-[22px] font-semibold text-[#174435]">Host &amp; Attendee Responsibilities</h2>
+                </div>
+                <p class="text-[15px] leading-7 text-[#3f6457]">When hosting an event through FOMO NOMO, you are responsible for maintaining a safe and respectful space. Event organizers must provide accurate venue details and adhere to local university, municipal, and state laws. Hosts retain full discretion to remove disruptive individuals from attendee lists using built-in host controls.</p>
             </article>
 
             <!-- 6. Moderation & Enforcement -->
             <article class="rounded-[22px] border border-[#c8e3d6] bg-[#174435] p-6 text-white md:col-span-2">
-                <h2 class="text-[22px] font-semibold">6. Moderation, Reporting &amp; Account Penalties</h2>
+                <div class="flex items-baseline gap-3 mb-4">
+                    <span class="text-2xl font-bold text-white">6</span>
+                    <h2 class="text-[22px] font-semibold">Moderation, Reporting &amp; Account Penalties</h2>
+                </div>
                 <p class="mt-3 text-[15px] leading-7 text-white/85">Every post, comment, and user profile features an easily accessible in-app <strong>Report</strong> option. Our moderation team active reviews flagged content within <strong>24 hours</strong>. Depending on severity, policy violations carry progressive penalties:</p>
                 <ul class="mt-4 grid gap-2 sm:grid-cols-3 text-[14px] text-white/90">
                     <li class="rounded-xl border border-white/20 bg-white/10 p-3"><strong>1. Content Removal:</strong> Offending posts or comments are deleted immediately without notice.</li>
